@@ -5,7 +5,7 @@ version = "0.1.0"
 edition = "2021"
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/Ladme/minitpr"
-keywords = ["gromacs", "molecular-dynamics", "tpr", "molecular-simulations"]
+keywords = ["gromacs", "molecular-dynamics", "tpr", "simulations"]
 categories = ["command-line-utilities", "science"]
 exclude = ["/tests"]
 
