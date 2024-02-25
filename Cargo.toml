@@ -1,0 +1,28 @@
+[package]
+name = "minitpr"
+description = "Library for Reading Gromacs TPR Files"
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/Ladme/minitpr"
+keywords = ["gromacs", "molecular-dynamics", "tpr", "molecular-simulations"]
+categories = ["command-line-utilities", "science"]
+exclude = ["/tests"]
+
+[dependencies]
+byteorder = "1.5.0"
+colored = "2.1.0"
+mendeleev = { version = "0.8.0", default-features = false, features = ["element_list", "symbol", "name"] }
+num = "0.4.1"
+num-derive = "0.4.2"
+num-traits = "0.2.18"
+serde = { version = "1.0.197", features = ["derive"], optional = true }
+strum = { version = "0.26.1", features = ["derive"] }
+thiserror = "1.0.57"
+
+[dev-dependencies]
+float-cmp = "0.9.0"
+serde_yaml = "0.9.32"
+
+[features]
+serde = ["dep:serde", "mendeleev/serde"]

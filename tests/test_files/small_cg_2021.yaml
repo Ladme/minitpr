@@ -1,0 +1,717 @@
+header:
+  gromacs_version: VERSION 2021.4
+  precision: Single
+  tpr_version: 122
+  tpr_generation: 28
+  file_tag: release
+  n_atoms: 77
+  n_coupling_groups: 1
+  fep_state: 0
+  lambda: 0.0
+  has_input_record: true
+  has_topology: true
+  has_coordinates: true
+  has_velocities: true
+  has_forces: false
+  has_box: true
+  body_size: 24909
+system_name: Membrane
+simbox:
+  simbox:
+  - - 9.212200164794922
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 9.212200164794922
+    - 0.0
+  - - 0.0
+    - 0.0
+    - 11.334400177001953
+  simbox_rel:
+  - - 0.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - 0.0
+  simbox_v:
+  - - 0.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - 0.0
+topology:
+  atoms:
+  - atom_name: BB
+    atom_number: 1
+    residue_name: LEU
+    residue_number: 1
+    mass: 72.0
+    charge: 1.0
+    element: null
+  - atom_name: SC1
+    atom_number: 2
+    residue_name: LEU
+    residue_number: 1
+    mass: 54.0
+    charge: 0.0
+    element: null
+  - atom_name: BB
+    atom_number: 3
+    residue_name: SER
+    residue_number: 2
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: SC1
+    atom_number: 4
+    residue_name: SER
+    residue_number: 2
+    mass: 36.0
+    charge: 0.0
+    element: null
+  - atom_name: BB
+    atom_number: 5
+    residue_name: SER
+    residue_number: 3
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: SC1
+    atom_number: 6
+    residue_name: SER
+    residue_number: 3
+    mass: 36.0
+    charge: 0.0
+    element: null
+  - atom_name: BB
+    atom_number: 7
+    residue_name: LEU
+    residue_number: 4
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: SC1
+    atom_number: 8
+    residue_name: LEU
+    residue_number: 4
+    mass: 54.0
+    charge: 0.0
+    element: null
+  - atom_name: BB
+    atom_number: 9
+    residue_name: LEU
+    residue_number: 5
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: SC1
+    atom_number: 10
+    residue_name: LEU
+    residue_number: 5
+    mass: 54.0
+    charge: 0.0
+    element: null
+  - atom_name: BB
+    atom_number: 11
+    residue_name: SER
+    residue_number: 6
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: SC1
+    atom_number: 12
+    residue_name: SER
+    residue_number: 6
+    mass: 36.0
+    charge: 0.0
+    element: null
+  - atom_name: BB
+    atom_number: 13
+    residue_name: LEU
+    residue_number: 7
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: SC1
+    atom_number: 14
+    residue_name: LEU
+    residue_number: 7
+    mass: 54.0
+    charge: 0.0
+    element: null
+  - atom_name: BB
+    atom_number: 15
+    residue_name: LEU
+    residue_number: 8
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: SC1
+    atom_number: 16
+    residue_name: LEU
+    residue_number: 8
+    mass: 54.0
+    charge: 0.0
+    element: null
+  - atom_name: BB
+    atom_number: 17
+    residue_name: SER
+    residue_number: 9
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: SC1
+    atom_number: 18
+    residue_name: SER
+    residue_number: 9
+    mass: 36.0
+    charge: 0.0
+    element: null
+  - atom_name: BB
+    atom_number: 19
+    residue_name: SER
+    residue_number: 10
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: SC1
+    atom_number: 20
+    residue_name: SER
+    residue_number: 10
+    mass: 36.0
+    charge: 0.0
+    element: null
+  - atom_name: BB
+    atom_number: 21
+    residue_name: LEU
+    residue_number: 11
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: SC1
+    atom_number: 22
+    residue_name: LEU
+    residue_number: 11
+    mass: 54.0
+    charge: 0.0
+    element: null
+  - atom_name: BB
+    atom_number: 23
+    residue_name: LEU
+    residue_number: 12
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: SC1
+    atom_number: 24
+    residue_name: LEU
+    residue_number: 12
+    mass: 54.0
+    charge: 0.0
+    element: null
+  - atom_name: BB
+    atom_number: 25
+    residue_name: SER
+    residue_number: 13
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: SC1
+    atom_number: 26
+    residue_name: SER
+    residue_number: 13
+    mass: 36.0
+    charge: 0.0
+    element: null
+  - atom_name: BB
+    atom_number: 27
+    residue_name: LEU
+    residue_number: 14
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: SC1
+    atom_number: 28
+    residue_name: LEU
+    residue_number: 14
+    mass: 54.0
+    charge: 0.0
+    element: null
+  - atom_name: BB
+    atom_number: 29
+    residue_name: LEU
+    residue_number: 15
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: SC1
+    atom_number: 30
+    residue_name: LEU
+    residue_number: 15
+    mass: 54.0
+    charge: 0.0
+    element: null
+  - atom_name: BB
+    atom_number: 31
+    residue_name: SER
+    residue_number: 16
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: SC1
+    atom_number: 32
+    residue_name: SER
+    residue_number: 16
+    mass: 36.0
+    charge: 0.0
+    element: null
+  - atom_name: BB
+    atom_number: 33
+    residue_name: SER
+    residue_number: 17
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: SC1
+    atom_number: 34
+    residue_name: SER
+    residue_number: 17
+    mass: 36.0
+    charge: 0.0
+    element: null
+  - atom_name: BB
+    atom_number: 35
+    residue_name: LEU
+    residue_number: 18
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: SC1
+    atom_number: 36
+    residue_name: LEU
+    residue_number: 18
+    mass: 54.0
+    charge: 0.0
+    element: null
+  - atom_name: BB
+    atom_number: 37
+    residue_name: LEU
+    residue_number: 19
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: SC1
+    atom_number: 38
+    residue_name: LEU
+    residue_number: 19
+    mass: 54.0
+    charge: 0.0
+    element: null
+  - atom_name: BB
+    atom_number: 39
+    residue_name: SER
+    residue_number: 20
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: SC1
+    atom_number: 40
+    residue_name: SER
+    residue_number: 20
+    mass: 36.0
+    charge: 0.0
+    element: null
+  - atom_name: BB
+    atom_number: 41
+    residue_name: LEU
+    residue_number: 21
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: SC1
+    atom_number: 42
+    residue_name: LEU
+    residue_number: 21
+    mass: 54.0
+    charge: 0.0
+    element: null
+  - atom_name: NC3
+    atom_number: 43
+    residue_name: POPC
+    residue_number: 22
+    mass: 72.0
+    charge: 1.0
+    element: null
+  - atom_name: PO4
+    atom_number: 44
+    residue_name: POPC
+    residue_number: 22
+    mass: 72.0
+    charge: -1.0
+    element: null
+  - atom_name: GL1
+    atom_number: 45
+    residue_name: POPC
+    residue_number: 22
+    mass: 54.0
+    charge: 0.0
+    element: null
+  - atom_name: GL2
+    atom_number: 46
+    residue_name: POPC
+    residue_number: 22
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: C1A
+    atom_number: 47
+    residue_name: POPC
+    residue_number: 22
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: D2A
+    atom_number: 48
+    residue_name: POPC
+    residue_number: 22
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: C3A
+    atom_number: 49
+    residue_name: POPC
+    residue_number: 22
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: C4A
+    atom_number: 50
+    residue_name: POPC
+    residue_number: 22
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: C1B
+    atom_number: 51
+    residue_name: POPC
+    residue_number: 22
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: C2B
+    atom_number: 52
+    residue_name: POPC
+    residue_number: 22
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: C3B
+    atom_number: 53
+    residue_name: POPC
+    residue_number: 22
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: C4B
+    atom_number: 54
+    residue_name: POPC
+    residue_number: 22
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: NC3
+    atom_number: 55
+    residue_name: POPC
+    residue_number: 23
+    mass: 72.0
+    charge: 1.0
+    element: null
+  - atom_name: PO4
+    atom_number: 56
+    residue_name: POPC
+    residue_number: 23
+    mass: 72.0
+    charge: -1.0
+    element: null
+  - atom_name: GL1
+    atom_number: 57
+    residue_name: POPC
+    residue_number: 23
+    mass: 54.0
+    charge: 0.0
+    element: null
+  - atom_name: GL2
+    atom_number: 58
+    residue_name: POPC
+    residue_number: 23
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: C1A
+    atom_number: 59
+    residue_name: POPC
+    residue_number: 23
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: D2A
+    atom_number: 60
+    residue_name: POPC
+    residue_number: 23
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: C3A
+    atom_number: 61
+    residue_name: POPC
+    residue_number: 23
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: C4A
+    atom_number: 62
+    residue_name: POPC
+    residue_number: 23
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: C1B
+    atom_number: 63
+    residue_name: POPC
+    residue_number: 23
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: C2B
+    atom_number: 64
+    residue_name: POPC
+    residue_number: 23
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: C3B
+    atom_number: 65
+    residue_name: POPC
+    residue_number: 23
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: C4B
+    atom_number: 66
+    residue_name: POPC
+    residue_number: 23
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: W
+    atom_number: 67
+    residue_name: W
+    residue_number: 24
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: W
+    atom_number: 68
+    residue_name: W
+    residue_number: 25
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: W
+    atom_number: 69
+    residue_name: W
+    residue_number: 26
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: W
+    atom_number: 70
+    residue_name: W
+    residue_number: 27
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: W
+    atom_number: 71
+    residue_name: W
+    residue_number: 28
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: W
+    atom_number: 72
+    residue_name: W
+    residue_number: 29
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: W
+    atom_number: 73
+    residue_name: W
+    residue_number: 30
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: W
+    atom_number: 74
+    residue_name: W
+    residue_number: 31
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: W
+    atom_number: 75
+    residue_name: W
+    residue_number: 32
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: W
+    atom_number: 76
+    residue_name: W
+    residue_number: 33
+    mass: 72.0
+    charge: 0.0
+    element: null
+  - atom_name: CL-
+    atom_number: 77
+    residue_name: ION
+    residue_number: 34
+    mass: 35.452999114990234
+    charge: -1.0
+    element: null
+  bonds:
+  - atom1: 0
+    atom2: 1
+  - atom1: 2
+    atom2: 3
+  - atom1: 4
+    atom2: 5
+  - atom1: 6
+    atom2: 7
+  - atom1: 8
+    atom2: 9
+  - atom1: 10
+    atom2: 11
+  - atom1: 12
+    atom2: 13
+  - atom1: 14
+    atom2: 15
+  - atom1: 16
+    atom2: 17
+  - atom1: 18
+    atom2: 19
+  - atom1: 20
+    atom2: 21
+  - atom1: 22
+    atom2: 23
+  - atom1: 24
+    atom2: 25
+  - atom1: 26
+    atom2: 27
+  - atom1: 28
+    atom2: 29
+  - atom1: 30
+    atom2: 31
+  - atom1: 32
+    atom2: 33
+  - atom1: 34
+    atom2: 35
+  - atom1: 36
+    atom2: 37
+  - atom1: 38
+    atom2: 39
+  - atom1: 40
+    atom2: 41
+  - atom1: 0
+    atom2: 2
+  - atom1: 2
+    atom2: 4
+  - atom1: 4
+    atom2: 6
+  - atom1: 6
+    atom2: 8
+  - atom1: 8
+    atom2: 10
+  - atom1: 10
+    atom2: 12
+  - atom1: 12
+    atom2: 14
+  - atom1: 14
+    atom2: 16
+  - atom1: 16
+    atom2: 18
+  - atom1: 18
+    atom2: 20
+  - atom1: 20
+    atom2: 22
+  - atom1: 22
+    atom2: 24
+  - atom1: 24
+    atom2: 26
+  - atom1: 26
+    atom2: 28
+  - atom1: 28
+    atom2: 30
+  - atom1: 30
+    atom2: 32
+  - atom1: 32
+    atom2: 34
+  - atom1: 34
+    atom2: 36
+  - atom1: 36
+    atom2: 38
+  - atom1: 38
+    atom2: 40
+  - atom1: 42
+    atom2: 43
+  - atom1: 43
+    atom2: 44
+  - atom1: 44
+    atom2: 45
+  - atom1: 44
+    atom2: 46
+  - atom1: 46
+    atom2: 47
+  - atom1: 47
+    atom2: 48
+  - atom1: 48
+    atom2: 49
+  - atom1: 45
+    atom2: 50
+  - atom1: 50
+    atom2: 51
+  - atom1: 51
+    atom2: 52
+  - atom1: 52
+    atom2: 53
+  - atom1: 54
+    atom2: 55
+  - atom1: 55
+    atom2: 56
+  - atom1: 56
+    atom2: 57
+  - atom1: 56
+    atom2: 58
+  - atom1: 58
+    atom2: 59
+  - atom1: 59
+    atom2: 60
+  - atom1: 60
+    atom2: 61
+  - atom1: 57
+    atom2: 62
+  - atom1: 62
+    atom2: 63
+  - atom1: 63
+    atom2: 64
+  - atom1: 64
+    atom2: 65
