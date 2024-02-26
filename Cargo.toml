@@ -7,7 +7,7 @@ license = "MIT OR Apache-2.0"
 repository = "https://github.com/Ladme/minitpr"
 keywords = ["gromacs", "molecular-dynamics", "tpr", "simulations"]
 categories = ["command-line-utilities", "science"]
-exclude = ["/tests"]
+exclude = ["/tests", "/.vscode"]
 
 [dependencies]
 byteorder = "1.5.0"
