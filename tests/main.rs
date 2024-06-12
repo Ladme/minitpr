@@ -990,7 +990,7 @@ mod tests {
         let first_atom = atom!("BB", 1, "GLY", 1, 72.0, 1.0, None);
         let last_atom = atom!("CL", 16844, "ION", 11180, 35.453, -1.0, None);
 
-        let first_bond = bond!(1, 2);
+        let first_bond = bond!(1, 2); // bond!(0, 1) is also present
         let last_bond = bond!(6203, 6204);
 
         test_eq_atom(&tpr.topology.atoms[0], &first_atom);
@@ -998,6 +998,72 @@ mod tests {
 
         assert!(&tpr.topology.bonds.contains(&first_bond));
         assert!(&tpr.topology.bonds.contains(&last_bond));
+    }
+
+    fn test_eq_triclinic(tpr: &TprFile) {
+        let simbox = tpr.simbox.as_ref().unwrap();
+
+        assert_approx_eq!(f64, simbox.simbox[0][0], 5.29700, epsilon = 0.000001);
+        assert_approx_eq!(f64, simbox.simbox[0][1], 0.00000, epsilon = 0.000001);
+        assert_approx_eq!(f64, simbox.simbox[0][2], 0.00000, epsilon = 0.000001);
+
+        assert_approx_eq!(f64, simbox.simbox[1][0], 0.84445, epsilon = 0.000001);
+        assert_approx_eq!(f64, simbox.simbox[1][1], 4.78912, epsilon = 0.000001);
+        assert_approx_eq!(f64, simbox.simbox[1][2], 0.00000, epsilon = 0.000001);
+
+        assert_approx_eq!(f64, simbox.simbox[2][0], 1.01785, epsilon = 0.000001);
+        assert_approx_eq!(f64, simbox.simbox[2][1], -1.69043, epsilon = 0.000001);
+        assert_approx_eq!(f64, simbox.simbox[2][2], 2.22778, epsilon = 0.000001);
+
+        assert_approx_eq!(f64, simbox.simbox_rel[0][0], 0.0000, epsilon = 0.000001);
+        assert_approx_eq!(f64, simbox.simbox_rel[0][1], 0.0000, epsilon = 0.000001);
+        assert_approx_eq!(f64, simbox.simbox_rel[0][2], 0.0000, epsilon = 0.000001);
+
+        assert_approx_eq!(f64, simbox.simbox_rel[1][0], 0.0000, epsilon = 0.000001);
+        assert_approx_eq!(f64, simbox.simbox_rel[1][1], 0.0000, epsilon = 0.000001);
+        assert_approx_eq!(f64, simbox.simbox_rel[1][2], 0.0000, epsilon = 0.000001);
+
+        assert_approx_eq!(f64, simbox.simbox_rel[2][0], 0.0000, epsilon = 0.000001);
+        assert_approx_eq!(f64, simbox.simbox_rel[2][1], 0.0000, epsilon = 0.000001);
+        assert_approx_eq!(f64, simbox.simbox_rel[2][2], 0.0000, epsilon = 0.000001);
+
+        assert_approx_eq!(f64, simbox.simbox_v[0][0], 0.0000, epsilon = 0.000001);
+        assert_approx_eq!(f64, simbox.simbox_v[0][1], 0.0000, epsilon = 0.000001);
+        assert_approx_eq!(f64, simbox.simbox_v[0][2], 0.0000, epsilon = 0.000001);
+
+        assert_approx_eq!(f64, simbox.simbox_v[1][0], 0.0000, epsilon = 0.000001);
+        assert_approx_eq!(f64, simbox.simbox_v[1][1], 0.0000, epsilon = 0.000001);
+        assert_approx_eq!(f64, simbox.simbox_v[1][2], 0.0000, epsilon = 0.000001);
+
+        assert_approx_eq!(f64, simbox.simbox_v[2][0], 0.0000, epsilon = 0.000001);
+        assert_approx_eq!(f64, simbox.simbox_v[2][1], 0.0000, epsilon = 0.000001);
+        assert_approx_eq!(f64, simbox.simbox_v[2][2], 0.0000, epsilon = 0.000001);
+
+        assert_eq!(tpr.header.n_atoms, 50);
+
+        let first_atom = atom!("BB", 1, "THR", 1, 72.0, 1.0, None);
+        let last_atom = atom!("SC2", 50, "LYS", 21, 54.0, 1.0, None);
+
+        let first_bond = bond!(0, 1);
+        let last_bond = bond!(48, 49);
+
+        test_eq_atom(&tpr.topology.atoms[0], &first_atom);
+        test_eq_atom(&tpr.topology.atoms[49], &last_atom);
+
+        assert!(&tpr.topology.bonds.contains(&first_bond));
+        assert!(&tpr.topology.bonds.contains(&last_bond));
+    }
+
+    #[test]
+    fn triclinic_2021() {
+        let tpr = TprFile::parse("tests/test_files/triclinic_2021.tpr").unwrap();
+        test_eq_triclinic(&tpr);
+    }
+
+    #[test]
+    fn triclinic_5() {
+        let tpr = TprFile::parse("tests/test_files/triclinic_5.tpr").unwrap();
+        test_eq_triclinic(&tpr);
     }
 }
 
