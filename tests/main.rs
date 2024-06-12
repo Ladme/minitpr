@@ -58,7 +58,7 @@ mod tests {
         assert_approx_eq!(f64, header.lambda, 0.0);
         assert!(header.has_input_record);
         assert!(header.has_topology);
-        assert!(header.has_coordinates);
+        assert!(header.has_positions);
         assert!(header.has_velocities);
         assert!(!header.has_forces);
         assert!(header.has_box);
@@ -370,7 +370,7 @@ mod tests {
         assert_approx_eq!(f64, header.lambda, 0.0);
         assert!(header.has_input_record);
         assert!(header.has_topology);
-        assert!(header.has_coordinates);
+        assert!(header.has_positions);
         assert!(header.has_velocities);
         assert!(!header.has_forces);
         assert!(header.has_box);

@@ -6,12 +6,14 @@
 use crate::{
     errors::ParseTprError,
     structures::{Precision, SimBox, TprFile, TprHeader, TprTopology},
+    TprCoordinates,
 };
 use std::{fs::File, io::BufReader, path::Path};
 use xdr::XdrFile;
 
 use self::{ffparams::FFParams, symtab::SymTable};
 
+pub mod coordinates;
 pub mod ffparams;
 pub mod header;
 pub mod interactions;
@@ -67,10 +69,14 @@ pub(crate) fn parse_tpr(filename: impl AsRef<Path>) -> Result<TprFile, ParseTprE
         header.n_atoms,
     )?;
 
+    // get positions, velocities, and forces
+    let coordinates = TprCoordinates::parse(&mut xdrfile, &header)?;
+
     Ok(TprFile {
         header,
         system_name,
         simbox,
         topology: top,
+        coordinates,
     })
 }

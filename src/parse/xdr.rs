@@ -88,6 +88,16 @@ impl XdrFile {
         }
     }
 
+    /// Read three `f32` or `f64` values from `XdrFile` depending on the provided precision.
+    #[inline(always)]
+    pub(super) fn read_vector3(&mut self, precision: Precision) -> Result<[f64; 3], Error> {
+        Ok([
+            self.read_real(precision)?,
+            self.read_real(precision)?,
+            self.read_real(precision)?,
+        ])
+    }
+
     /// Jump N bytes depending on the provided precision.
     #[inline(always)]
     pub(super) fn skip_real(&mut self, precision: Precision) -> Result<(), Error> {

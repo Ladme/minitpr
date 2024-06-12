@@ -11,7 +11,7 @@ use crate::{
 use super::xdr::XdrFile;
 
 impl TprHeader {
-    /// Get TprHeader from a tpr file.
+    /// Get `TprHeader` from a tpr file.
     pub(super) fn parse(xdrfile: &mut XdrFile) -> Result<TprHeader, ParseTprError> {
         // get gromacs version used to write the tpr file
         let gromacs_version = xdrfile.read_string_4byte()?;
@@ -45,7 +45,7 @@ impl TprHeader {
 
         let has_input_record = xdrfile.read_bool_header()?;
         let has_topology = xdrfile.read_bool_header()?;
-        let has_coordinates = xdrfile.read_bool_header()?;
+        let has_positions = xdrfile.read_bool_header()?;
         let has_velocities = xdrfile.read_bool_header()?;
         let has_forces = xdrfile.read_bool_header()?;
         let has_box = xdrfile.read_bool_header()?;
@@ -69,7 +69,7 @@ impl TprHeader {
             lambda,
             has_input_record,
             has_topology,
-            has_coordinates,
+            has_positions,
             has_velocities,
             has_forces,
             has_box,

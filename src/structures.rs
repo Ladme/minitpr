@@ -19,6 +19,8 @@ pub struct TprFile {
     pub simbox: Option<SimBox>,
     /// system topology
     pub topology: TprTopology,
+    /// positions, velocities, and forces
+    pub coordinates: TprCoordinates,
 }
 
 /// Structure representing the header of the TPR file.
@@ -47,8 +49,8 @@ pub struct TprHeader {
     pub has_input_record: bool,
     /// is topology present?
     pub has_topology: bool,
-    /// are coordinates present?
-    pub has_coordinates: bool,
+    /// are positions present?
+    pub has_positions: bool,
     /// are velocities present?
     pub has_velocities: bool,
     /// are forces present?
@@ -68,6 +70,19 @@ pub struct TprTopology {
     /// list of bonds between atoms in the system
     /// the order of bonds is undefined
     pub bonds: Vec<Bond>,
+}
+
+/// Structure holding the parsed positions, velocities, and forces of particles.
+/// If the vector is empty, the corresponding properties are not present in the tpr file.
+#[derive(Debug, Clone)]
+#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
+pub struct TprCoordinates {
+    /// positions of particles in the system
+    pub positions: Vec<[f64; 3]>,
+    /// velocities of particles in the system
+    pub velocities: Vec<[f64; 3]>,
+    /// forces acting upon the particles of the system
+    pub forces: Vec<[f64; 3]>,
 }
 
 /// Structure representing simulation box dimensions.
