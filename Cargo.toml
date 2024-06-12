@@ -1,7 +1,7 @@
 [package]
 name = "minitpr"
 description = "Library for Reading Gromacs TPR Files"
-version = "0.1.1"
+version = "0.2.0"
 edition = "2021"
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/Ladme/minitpr"
@@ -12,7 +12,11 @@ exclude = ["/tests", "/.vscode"]
 [dependencies]
 byteorder = "1.5.0"
 colored = "2.1.0"
-mendeleev = { version = "0.8.0", default-features = false, features = ["element_list", "symbol", "name"] }
+mendeleev = { version = "0.8.0", default-features = false, features = [
+    "element_list",
+    "symbol",
+    "name",
+] }
 num = "0.4.1"
 num-derive = "0.4.2"
 num-traits = "0.2.18"

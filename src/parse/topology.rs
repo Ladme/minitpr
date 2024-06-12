@@ -3,7 +3,10 @@
 
 //! This file contains functions for obtaining system topology from a TPR file.
 
-use super::{ffparams::FFParams, molblocks::MolBlock, moltypes::MoleculeType, xdr::XdrFile};
+use super::{
+    ffparams::FFParams, interactions::Interaction, molblocks::MolBlock, moltypes::MoleculeType,
+    xdr::XdrFile,
+};
 use crate::{
     errors::ParseTprError,
     structures::{Precision, TprTopology},
@@ -43,11 +46,25 @@ impl TprTopology {
             molecule_blocks.push(MolBlock::parse(xdrfile, precision)?)
         }
 
-        // construct the topology from the molecule types and molecule blocks
-        let topology = TprTopology::construct_topology(molecule_blocks, molecule_types)?;
-
         // read the number of atoms for sanity checking
         let n_atoms = xdrfile.read_i32()?;
+
+        // read intermolecular interactions
+        let intermolecular = if xdrfile.read_bool_body(tpr_version)? {
+            Some(super::interactions::read_interactions(
+                xdrfile,
+                tpr_version,
+                ffparams,
+            )?)
+        } else {
+            None
+        };
+
+        // construct the topology from the molecule types, molecule blocks and intermolecular interactions
+        let topology =
+            TprTopology::construct_topology(molecule_blocks, molecule_types, intermolecular)?;
+
+        // check that the number of atoms is consistent
         if n_atoms != expected_n_atoms {
             return Err(ParseTprError::InconsistentNumberOfAtoms(
                 expected_n_atoms,
@@ -65,9 +82,11 @@ impl TprTopology {
         Ok(topology)
     }
 
+    /// Construct the final topology from molecule blocks, molecule types and intermolecular interactions.
     fn construct_topology(
         molecule_blocks: Vec<MolBlock>,
         molecule_types: Vec<MoleculeType>,
+        intermolecular: Option<Vec<Interaction>>,
     ) -> Result<TprTopology, ParseTprError> {
         let mut atoms = Vec::new();
         let mut bonds = Vec::new();
@@ -83,6 +102,15 @@ impl TprTopology {
 
             atoms.extend(new_atoms);
             bonds.extend(new_bonds);
+        }
+
+        // convert intermolecular interactions to bonds
+        if let Some(inter) = intermolecular {
+            for interaction in inter.iter() {
+                if let Some(bond) = interaction.unpack2bond(&atoms)? {
+                    bonds.push(bond);
+                }
+            }
         }
 
         Ok(TprTopology { atoms, bonds })

@@ -1,0 +1,9 @@
+{
+    "rust-analyzer.linkedProjects": [
+        "./Cargo.toml"
+    ],
+    "rust-analyzer.cargo.features": [
+        "serde"
+    ],
+    "editor.formatOnSave": true
+}

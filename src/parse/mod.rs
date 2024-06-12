@@ -14,6 +14,7 @@ use self::{ffparams::FFParams, symtab::SymTable};
 
 pub mod ffparams;
 pub mod header;
+pub mod interactions;
 pub mod molblocks;
 pub mod moltypes;
 pub mod simbox;

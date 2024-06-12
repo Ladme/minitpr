@@ -97,16 +97,13 @@ impl XdrFile {
         }
     }
 
-    /// Read `bool` value from `XdrFile`.
-    pub(super) fn read_bool(&mut self) -> Result<bool, Error> {
-        match self.read_u32()? {
-            0 => Ok(false),
-            _ => Ok(true),
-        }
+    /// Read `bool` value from `XdrFile` as an `u32` value. This function is used ONLY in the TPR header.
+    pub(super) fn read_bool_header(&mut self) -> Result<bool, Error> {
+        Ok(self.read_u32()? != 0)
     }
 
     /// Read a string with one useless 4byte header and one useful 4byte header from `XdrFile`.
-    /// This is used for a) the tpr file header and b) for the body of tpr files version < 119
+    /// This is used for a) the tpr file header and b) for the body of tpr files version < 119.
     pub(super) fn read_string_4byte(&mut self) -> Result<String, Error> {
         // first 4 bytes of the string header are not used
         self.reader.seek_relative(4)?;
@@ -143,7 +140,7 @@ impl XdrFile {
 
     /// Read a string from the body of the tpr file.
     /// This calls either `read_string_4byte` or `read_string_8byte` depending on the
-    /// version of the tpr file
+    /// version of the tpr file.
     pub(super) fn read_string_body(&mut self, tpr_version: i32) -> Result<String, Error> {
         if tpr_version < 119 {
             self.read_string_4byte()
@@ -153,7 +150,7 @@ impl XdrFile {
     }
 
     /// Read a short unsigned integer from the body of the tpr file.
-    /// This calls either `read_u32` or `read_u16` depending on the version of the tpr file
+    /// This calls either `read_u32` or `read_u16` depending on the version of the tpr file.
     pub(super) fn read_ushort_body(&mut self, tpr_version: i32) -> Result<u32, Error> {
         if tpr_version < 119 {
             self.read_u32()
@@ -163,12 +160,22 @@ impl XdrFile {
     }
 
     /// Read an unsigned char from the body of the tpr file.
-    /// This calls either `read_u32` or `read_u8` depending on the version of the tpr file
+    /// This calls either `read_u32` or `read_u8` depending on the version of the tpr file.
     pub(super) fn read_uchar_body(&mut self, tpr_version: i32) -> Result<u32, Error> {
         if tpr_version < 119 {
             self.read_u32()
         } else {
             Ok(self.read_u8()? as u32)
+        }
+    }
+
+    /// Read a boolean value from the body of the tpr file.
+    /// This calls either `read_u32` or `read_u8` depending on the version of the tpr file.
+    pub(super) fn read_bool_body(&mut self, tpr_version: i32) -> Result<bool, Error> {
+        if tpr_version < 119 {
+            Ok(self.read_u32()? != 0)
+        } else {
+            Ok(self.read_u8()? != 0)
         }
     }
 }

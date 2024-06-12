@@ -43,12 +43,12 @@ impl TprHeader {
         let fep_state = xdrfile.read_i32()?;
         let lambda = xdrfile.read_real(precision)?;
 
-        let has_input_record = xdrfile.read_bool()?;
-        let has_topology = xdrfile.read_bool()?;
-        let has_coordinates = xdrfile.read_bool()?;
-        let has_velocities = xdrfile.read_bool()?;
-        let has_forces = xdrfile.read_bool()?;
-        let has_box = xdrfile.read_bool()?;
+        let has_input_record = xdrfile.read_bool_header()?;
+        let has_topology = xdrfile.read_bool_header()?;
+        let has_coordinates = xdrfile.read_bool_header()?;
+        let has_velocities = xdrfile.read_bool_header()?;
+        let has_forces = xdrfile.read_bool_header()?;
+        let has_box = xdrfile.read_bool_header()?;
 
         // get information about the size of the tpr file (version >= 119 && generation >= 27)
         let body_size = if tpr_version >= 119 && tpr_generation >= 27 {

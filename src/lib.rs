@@ -7,9 +7,8 @@
 //!
 //! ## Capabilities and Limitations
 //! - Supports parsing of tpr files from version 103 onwards (compatible with Gromacs 5.1 and later).
-//! It efficiently extracts system topology: atoms, their basic properties, and the bonds between them.
+//! It efficiently extracts system topology: atoms, their basic properties, and the bonds between them (including intermolecular bonds).
 //! - Is currently **not** able to read positions and velocities of atoms, as well as forces acting on them.
-//! - Does **not** currently interpret intermolecular bonds, resulting in their omission from the parsed data.
 //! - Will **not** support parsing of force-field and simulation parameters, nor will it offer capabilities to write tpr files.
 //!
 //! ## Usage

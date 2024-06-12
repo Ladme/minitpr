@@ -47,7 +47,7 @@ mod tests {
 
     use float_cmp::assert_approx_eq;
 
-    fn test_eq_small_cg(tpr: &TprFile) {
+    fn test_eq_small_cg(tpr: &TprFile, intermolecular: bool) {
         let header = &tpr.header;
 
         assert_eq!(header.precision, Precision::Single);
@@ -199,7 +199,7 @@ mod tests {
 
         let bonds = &topology.bonds;
 
-        let expected_bonds = vec![
+        let mut expected_bonds = vec![
             bond!(0, 1),
             bond!(2, 3),
             bond!(4, 5),
@@ -265,6 +265,10 @@ mod tests {
             bond!(38, 40),
         ];
 
+        if intermolecular {
+            expected_bonds.extend(vec![bond!(28, 52), bond!(64, 67), bond!(73, 74)]);
+        }
+
         assert_eq!(bonds.len(), expected_bonds.len());
 
         for e in expected_bonds.iter() {
@@ -282,7 +286,7 @@ mod tests {
         assert_eq!(header.tpr_generation, 26);
         assert!(header.body_size.is_none());
 
-        test_eq_small_cg(&tpr);
+        test_eq_small_cg(&tpr, false);
     }
 
     #[test]
@@ -295,7 +299,7 @@ mod tests {
         assert_eq!(header.tpr_generation, 26);
         assert!(header.body_size.is_none());
 
-        test_eq_small_cg(&tpr);
+        test_eq_small_cg(&tpr, false);
     }
 
     #[test]
@@ -308,7 +312,46 @@ mod tests {
         assert_eq!(header.tpr_generation, 28);
         assert_eq!(header.body_size.unwrap(), 24909);
 
-        test_eq_small_cg(&tpr);
+        test_eq_small_cg(&tpr, false);
+    }
+
+    #[test]
+    fn small_cg_5_intermolecular() {
+        let tpr = TprFile::parse("tests/test_files/small_cg_5_intermolecular.tpr").unwrap();
+
+        let header = &tpr.header;
+        assert_eq!(header.gromacs_version, String::from("VERSION 5.1.4"));
+        assert_eq!(header.tpr_version, 103);
+        assert_eq!(header.tpr_generation, 26);
+        assert!(header.body_size.is_none());
+
+        test_eq_small_cg(&tpr, true);
+    }
+
+    #[test]
+    fn small_cg_2016_intermolecular() {
+        let tpr = TprFile::parse("tests/test_files/small_cg_2016_intermolecular.tpr").unwrap();
+
+        let header = &tpr.header;
+        assert_eq!(header.gromacs_version, String::from("VERSION 2016.4"));
+        assert_eq!(header.tpr_version, 110);
+        assert_eq!(header.tpr_generation, 26);
+        assert!(header.body_size.is_none());
+
+        test_eq_small_cg(&tpr, true);
+    }
+
+    #[test]
+    fn small_cg_2021_intermolecular() {
+        let tpr = TprFile::parse("tests/test_files/small_cg_2021_intermolecular.tpr").unwrap();
+
+        let header = &tpr.header;
+        assert_eq!(header.gromacs_version, String::from("VERSION 2021.4"));
+        assert_eq!(header.tpr_version, 122);
+        assert_eq!(header.tpr_generation, 28);
+        assert_eq!(header.body_size.unwrap(), 25429);
+
+        test_eq_small_cg(&tpr, true);
     }
 
     #[test]
@@ -319,7 +362,7 @@ mod tests {
         }
     }
 
-    fn test_eq_small_aa(tpr: &TprFile) {
+    fn test_eq_small_aa(tpr: &TprFile, intermolecular: bool) {
         let header = &tpr.header;
 
         assert_eq!(header.precision, Precision::Single);
@@ -575,7 +618,7 @@ mod tests {
 
         let bonds = &topology.bonds;
 
-        let expected_bonds = vec![
+        let mut expected_bonds = vec![
             bond!(0, 1),
             bond!(0, 2),
             bond!(0, 3),
@@ -754,6 +797,10 @@ mod tests {
             bond!(174, 177),
         ];
 
+        if intermolecular {
+            expected_bonds.extend(vec![bond!(15, 135), bond!(179, 181), bond!(149, 178)]);
+        }
+
         assert_eq!(bonds.len(), expected_bonds.len());
 
         for e in expected_bonds.iter() {
@@ -771,7 +818,7 @@ mod tests {
         assert_eq!(header.tpr_generation, 26);
         assert!(header.body_size.is_none());
 
-        test_eq_small_aa(&tpr);
+        test_eq_small_aa(&tpr, false);
     }
 
     #[test]
@@ -784,7 +831,7 @@ mod tests {
         assert_eq!(header.tpr_generation, 26);
         assert!(header.body_size.is_none());
 
-        test_eq_small_aa(&tpr);
+        test_eq_small_aa(&tpr, false);
     }
 
     #[test]
@@ -797,7 +844,46 @@ mod tests {
         assert_eq!(header.tpr_generation, 28);
         assert_eq!(header.body_size.unwrap(), 70119);
 
-        test_eq_small_aa(&tpr);
+        test_eq_small_aa(&tpr, false);
+    }
+
+    #[test]
+    fn small_aa_5_intermolecular() {
+        let tpr = TprFile::parse("tests/test_files/small_aa_5_intermolecular.tpr").unwrap();
+
+        let header = &tpr.header;
+        assert_eq!(header.gromacs_version, String::from("VERSION 5.1.4"));
+        assert_eq!(header.tpr_version, 103);
+        assert_eq!(header.tpr_generation, 26);
+        assert!(header.body_size.is_none());
+
+        test_eq_small_aa(&tpr, true);
+    }
+
+    #[test]
+    fn small_aa_2016_intermolecular() {
+        let tpr = TprFile::parse("tests/test_files/small_aa_2016_intermolecular.tpr").unwrap();
+
+        let header = &tpr.header;
+        assert_eq!(header.gromacs_version, String::from("VERSION 2016.4"));
+        assert_eq!(header.tpr_version, 110);
+        assert_eq!(header.tpr_generation, 26);
+        assert!(header.body_size.is_none());
+
+        test_eq_small_aa(&tpr, true);
+    }
+
+    #[test]
+    fn small_aa_2021_intermolecular() {
+        let tpr = TprFile::parse("tests/test_files/small_aa_2021_intermolecular.tpr").unwrap();
+
+        let header = &tpr.header;
+        assert_eq!(header.gromacs_version, String::from("VERSION 2021.4"));
+        assert_eq!(header.tpr_version, 122);
+        assert_eq!(header.tpr_generation, 28);
+        assert_eq!(header.body_size.unwrap(), 70639);
+
+        test_eq_small_aa(&tpr, true);
     }
 
     #[test]

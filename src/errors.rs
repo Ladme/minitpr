@@ -33,11 +33,11 @@ pub enum ParseTprError {
     /// Used when a symbol is requested from the SymTable that does not exist.
     #[error("{} invalid SymTable call: `{}` is out-of-range of the SymTable", "error:".red().bold(), .0.to_string().yellow())]
     IndexNotInSymTable(i32),
-    /// Used when sanity check for MoleculeTypeInteraction parsing fails.
-    #[error("{} discrepancy in MoleculeTypeInteraction of type `{}`: the number of instances is not divisible by the number of interacting atoms + 1",
+    /// Used when sanity check for Interaction parsing fails.
+    #[error("{} discrepancy in Interaction of type `{}`: the number of instances is not divisible by the number of interacting atoms + 1",
     "error:".red().bold(), .0.to_string().yellow())]
     InteractionDiscrepancy(i32),
-    /// Used when `interaction_type_index` for a MoleculeTypeInteraction does not exist.
+    /// Used when `interaction_type_index` for a Interaction does not exist.
     #[error("{} interaction type index `{}` does not exist", "error:".red().bold(), .0.to_string().yellow())]
     InvalidInteractionType(i32),
     /// Used when the tpr file has been parsed seemingly successfully but topology could not be constructed.
