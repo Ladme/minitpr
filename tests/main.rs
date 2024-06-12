@@ -356,10 +356,7 @@ mod tests {
 
     #[test]
     fn empty_fail() {
-        match TprFile::parse("tests/test_files/empty.tpr") {
-            Ok(_) => panic!("Parsing should have failed."),
-            Err(_) => (),
-        }
+        assert!(TprFile::parse("tests/test_files/empty.tpr").is_err());
     }
 
     fn test_eq_small_aa(tpr: &TprFile, intermolecular: bool) {
