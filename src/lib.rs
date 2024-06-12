@@ -3,13 +3,12 @@
 
 //! # minitpr
 //!
-//! `minitpr` is a Rust library designed for basic parsing of Gromacs tpr files, focusing on extracting system topology information.
+//! `minitpr` is a Rust library designed for basic parsing of Gromacs tpr files, focusing on extracting system topology and structure.
 //!
 //! ## Capabilities and Limitations
 //! - Supports parsing of tpr files from version 103 onwards (compatible with Gromacs 5.1 and later).
-//! It efficiently extracts system topology: atoms, their basic properties, and the bonds between them (including intermolecular bonds).
-//! - Is currently **not** able to read positions and velocities of atoms, as well as forces acting on them.
-//! - Will **not** support parsing of force-field and simulation parameters, nor will it offer capabilities to write tpr files.
+//! Extracts system topology and structure: atoms, their basic properties (including positions, velocities and forces), and bonds between atoms (including intermolecular bonds).
+//! - Does **not** support parsing of force-field and simulation parameters, nor does it offer capabilities to write tpr files.
 //!
 //! ## Usage
 //!
@@ -48,6 +47,7 @@
 //! - Molecular System Name: The name of the simulated system.
 //! - Simulation Box Dimensions: Available within the [`SimBox`](`crate::SimBox`) structure if present.
 //! - System Topology: Topology of the molecular system (see [`TprTopology`](`crate::TprTopology`) structure).
+//! - Coordinates: Positions, velocities, and forces of the particles in the system (see [`TprCoordinates`](`crate::TprCoordinates`) structure).
 //!
 //! Each atom (see [`Atom`](`crate::Atom`)) represented in the system topology includes:
 //! - Atom name.
@@ -57,6 +57,9 @@
 //! - Mass.
 //! - Charge.
 //! - Element (`None` if unidentifiable).
+//! - Position (`None` if not present).
+//! - Velocity (`None` if not present).
+//! - Force (`None` if not present).
 //!
 //! ## Features
 //! ### Serialization/Deserialization
@@ -109,9 +112,8 @@ impl TprFile {
     /// ## Notes
     /// - Only tpr files version 103 or higher are supported (Gromacs 5.1 onwards).
     /// - The function only parses the following information: tpr file header,
-    /// name of the system, simulation box, and system topology (atoms and bonds).
-    /// - Positions, velocities, and forces are NOT parsed.
-    /// - Inter-molecular bonds are NOT parsed.
+    /// name of the system, simulation box, system topology (atoms and bonds),
+    /// positions, velocities, and forces (if present).
     /// - Force-field properties and simulation parameters are NOT parsed.
     /// - If the tpr file does not contain topology information, this function will return an error.
     pub fn parse(filename: impl AsRef<Path>) -> Result<TprFile, ParseTprError> {

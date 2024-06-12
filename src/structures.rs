@@ -11,15 +11,15 @@ use crate::DIM;
 #[derive(Debug, Clone)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 pub struct TprFile {
-    /// TPR file header
+    /// TPR file header.
     pub header: TprHeader,
-    /// name of the molecular system
+    /// Name of the molecular system.
     pub system_name: String,
-    /// dimensions of the simulation box
+    /// Dimensions of the simulation box.
     pub simbox: Option<SimBox>,
-    /// system topology
+    /// System topology.
     pub topology: TprTopology,
-    /// positions, velocities, and forces
+    /// Positions, velocities, and forces.
     pub coordinates: TprCoordinates,
 }
 
@@ -27,37 +27,37 @@ pub struct TprFile {
 #[derive(Debug, Clone)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 pub struct TprHeader {
-    /// gromacs version used to write the tpr file
+    /// Gromacs version used to write the tpr file.
     pub gromacs_version: String,
-    /// precision of the tpr file
+    /// Precision of the tpr file.
     pub precision: Precision,
-    /// version of the tpr file
+    /// Version of the tpr file.
     pub tpr_version: i32,
-    /// generation of the tpr file
+    /// Generation of the tpr file.
     pub tpr_generation: i32,
-    /// tpr file tag
+    /// Tpr file tag.
     pub file_tag: String,
-    /// number of atoms
+    /// Number of atoms.
     pub n_atoms: i32,
-    /// number of temperature coupling groups
+    /// Number of temperature coupling groups.
     pub n_coupling_groups: i32,
-    /// value of the alchemical state
+    /// Value of the alchemical state.
     pub fep_state: i32,
-    /// value of lambda
+    /// Value of lambda.
     pub lambda: f64,
-    /// is input record present?
+    /// Is input record present?
     pub has_input_record: bool,
-    /// is topology present?
+    /// Is topology present?
     pub has_topology: bool,
-    /// are positions present?
+    /// Are positions present?
     pub has_positions: bool,
-    /// are velocities present?
+    /// Are velocities present?
     pub has_velocities: bool,
-    /// are forces present?
+    /// Are forces present?
     pub has_forces: bool,
-    /// is the simulation box present?
+    /// Is the simulation box present?
     pub has_box: bool,
-    /// size of the body of the tpr file
+    /// Size of the body of the tpr file.
     pub body_size: Option<i64>,
 }
 
@@ -65,10 +65,10 @@ pub struct TprHeader {
 #[derive(Debug, Clone)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 pub struct TprTopology {
-    /// list of atoms in the system
+    /// List of atoms in the system.
     pub atoms: Vec<Atom>,
-    /// list of bonds between atoms in the system
-    /// the order of bonds is undefined
+    /// List of bonds between atoms in the system.
+    /// The order of bonds is undefined.
     pub bonds: Vec<Bond>,
 }
 
@@ -77,11 +77,11 @@ pub struct TprTopology {
 #[derive(Debug, Clone)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
 pub struct TprCoordinates {
-    /// positions of particles in the system
+    /// Positions of particles in the system.
     pub positions: Vec<[f64; 3]>,
-    /// velocities of particles in the system
+    /// Velocities of particles in the system.
     pub velocities: Vec<[f64; 3]>,
-    /// forces acting upon the particles of the system
+    /// Forces acting upon the particles of the system.
     pub forces: Vec<[f64; 3]>,
 }
 
