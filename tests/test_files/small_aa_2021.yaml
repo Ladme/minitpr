@@ -1,0 +1,3316 @@
+header:
+  gromacs_version: VERSION 2021.4
+  precision: Single
+  tpr_version: 122
+  tpr_generation: 28
+  file_tag: release
+  n_atoms: 182
+  n_coupling_groups: 3
+  fep_state: 0
+  lambda: 0.0
+  has_input_record: true
+  has_topology: true
+  has_positions: true
+  has_velocities: true
+  has_forces: false
+  has_box: true
+  body_size: 70119
+system_name: Protein
+simbox:
+  simbox:
+  - - 10.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 10.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - 10.0
+  simbox_rel:
+  - - 0.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 1.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - 0.0
+  simbox_v:
+  - - 0.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - 0.0
+  - - 0.0
+    - 0.0
+    - 0.0
+topology:
+  atoms:
+  - atom_name: N
+    atom_number: 1
+    residue_name: LEU
+    residue_number: 1
+    mass: 14.010000228881836
+    charge: 0.10100000351667404
+    element: N
+    position:
+    - 2.371999979019165
+    - 4.710000038146973
+    - 1.4670000076293945
+    velocity:
+    - -0.05927027761936188
+    - 0.060273148119449615
+    - -0.9570744037628174
+    force: null
+  - atom_name: H1
+    atom_number: 2
+    residue_name: LEU
+    residue_number: 1
+    mass: 1.0080000162124634
+    charge: 0.21480000019073486
+    element: H
+    position:
+    - 2.3350000381469727
+    - 4.695000171661377
+    - 1.559000015258789
+    velocity:
+    - 0.8429437875747681
+    - 2.080826997756958
+    - 1.504356861114502
+    force: null
+  - atom_name: H2
+    atom_number: 3
+    residue_name: LEU
+    residue_number: 1
+    mass: 1.0080000162124634
+    charge: 0.21480000019073486
+    element: H
+    position:
+    - 2.434999942779541
+    - 4.636000156402588
+    - 1.444000005722046
+    velocity:
+    - 4.1817545890808105
+    - 1.5800656080245972
+    - 0.26450487971305847
+    force: null
+  - atom_name: H3
+    atom_number: 4
+    residue_name: LEU
+    residue_number: 1
+    mass: 1.0080000162124634
+    charge: 0.21480000019073486
+    element: H
+    position:
+    - 2.4210000038146973
+    - 4.796999931335449
+    - 1.465000033378601
+    velocity:
+    - 1.6360260248184204
+    - 0.9078105092048645
+    - 1.4100717306137085
+    force: null
+  - atom_name: CA
+    atom_number: 5
+    residue_name: LEU
+    residue_number: 1
+    mass: 12.010000228881836
+    charge: 0.010400000028312206
+    element: C
+    position:
+    - 2.263000011444092
+    - 4.714000225067139
+    - 1.371999979019165
+    velocity:
+    - 0.49989789724349976
+    - -0.5493621230125427
+    - -0.8536252975463867
+    force: null
+  - atom_name: HA
+    atom_number: 6
+    residue_name: LEU
+    residue_number: 1
+    mass: 1.0080000162124634
+    charge: 0.10530000180006027
+    element: H
+    position:
+    - 2.2060000896453857
+    - 4.789999961853027
+    - 1.402999997138977
+    velocity:
+    - 0.21210052073001862
+    - 2.03641939163208
+    - -0.32231077551841736
+    force: null
+  - atom_name: CB
+    atom_number: 7
+    residue_name: LEU
+    residue_number: 1
+    mass: 12.010000228881836
+    charge: -0.024399999529123306
+    element: C
+    position:
+    - 2.315000057220459
+    - 4.736999988555908
+    - 1.2300000190734863
+    velocity:
+    - -0.04880274459719658
+    - -0.11227384954690933
+    - 0.14250901341438293
+    force: null
+  - atom_name: HB1
+    atom_number: 8
+    residue_name: LEU
+    residue_number: 1
+    mass: 1.0080000162124634
+    charge: 0.025599999353289604
+    element: H
+    position:
+    - 2.378000020980835
+    - 4.663000106811523
+    - 1.2050000429153442
+    velocity:
+    - 1.4572099447250366
+    - -0.7751692533493042
+    - -1.9163752794265747
+    force: null
+  - atom_name: HB2
+    atom_number: 9
+    residue_name: LEU
+    residue_number: 1
+    mass: 1.0080000162124634
+    charge: 0.025599999353289604
+    element: H
+    position:
+    - 2.364000082015991
+    - 4.824999809265137
+    - 1.2269999980926514
+    velocity:
+    - 1.5460070371627808
+    - 0.21317388117313385
+    - 0.9696283936500549
+    force: null
+  - atom_name: CG
+    atom_number: 10
+    residue_name: LEU
+    residue_number: 1
+    mass: 12.010000228881836
+    charge: 0.34209999442100525
+    element: C
+    position:
+    - 2.197999954223633
+    - 4.739999771118164
+    - 1.1330000162124634
+    velocity:
+    - 0.5151768922805786
+    - -0.2494332194328308
+    - -0.7461569905281067
+    force: null
+  - atom_name: HG
+    atom_number: 11
+    residue_name: LEU
+    residue_number: 1
+    mass: 1.0080000162124634
+    charge: -0.03799999877810478
+    element: H
+    position:
+    - 2.1489999294281006
+    - 4.6529998779296875
+    - 1.1369999647140503
+    velocity:
+    - 0.47245073318481445
+    - 0.24406957626342773
+    - 2.0340938568115234
+    force: null
+  - atom_name: CD1
+    atom_number: 12
+    residue_name: LEU
+    residue_number: 1
+    mass: 12.010000228881836
+    charge: -0.4106000065803528
+    element: C
+    position:
+    - 2.1029999256134033
+    - 4.853000164031982
+    - 1.1720000505447388
+    velocity:
+    - 0.9018667936325073
+    - 0.023521816357970238
+    - -0.6530754566192627
+    force: null
+  - atom_name: HD11
+    atom_number: 13
+    residue_name: LEU
+    residue_number: 1
+    mass: 1.0080000162124634
+    charge: 0.09799999743700027
+    element: H
+    position:
+    - 2.0260000228881836
+    - 4.855000019073486
+    - 1.1080000400543213
+    velocity:
+    - 0.1625915765762329
+    - -0.7097123265266418
+    - 0.3871609568595886
+    force: null
+  - atom_name: HD12
+    atom_number: 14
+    residue_name: LEU
+    residue_number: 1
+    mass: 1.0080000162124634
+    charge: 0.09799999743700027
+    element: H
+    position:
+    - 2.069000005722046
+    - 4.8379998207092285
+    - 1.2640000581741333
+    velocity:
+    - 0.8141794800758362
+    - -1.7601244449615479
+    - 0.24044279754161835
+    force: null
+  - atom_name: HD13
+    atom_number: 15
+    residue_name: LEU
+    residue_number: 1
+    mass: 1.0080000162124634
+    charge: 0.09799999743700027
+    element: H
+    position:
+    - 2.1510000228881836
+    - 4.940000057220459
+    - 1.1679999828338623
+    velocity:
+    - -1.8972598314285278
+    - 2.408400774002075
+    - -0.864676296710968
+    force: null
+  - atom_name: CD2
+    atom_number: 16
+    residue_name: LEU
+    residue_number: 1
+    mass: 12.010000228881836
+    charge: -0.41040000319480896
+    element: C
+    position:
+    - 2.25
+    - 4.763999938964844
+    - 0.9909999966621399
+    velocity:
+    - 0.13203164935112
+    - 1.0101984739303589
+    - -0.3220198452472687
+    force: null
+  - atom_name: HD21
+    atom_number: 17
+    residue_name: LEU
+    residue_number: 1
+    mass: 1.0080000162124634
+    charge: 0.09799999743700027
+    element: H
+    position:
+    - 2.1730000972747803
+    - 4.765999794006348
+    - 0.9279999732971191
+    velocity:
+    - -3.7564055919647217
+    - 1.055666208267212
+    - 0.6025922894477844
+    force: null
+  - atom_name: HD22
+    atom_number: 18
+    residue_name: LEU
+    residue_number: 1
+    mass: 1.0080000162124634
+    charge: 0.09799999743700027
+    element: H
+    position:
+    - 2.2980000972747803
+    - 4.85099983215332
+    - 0.9879999756813049
+    velocity:
+    - 0.2210770696401596
+    - 0.0914202481508255
+    - 1.2444572448730469
+    force: null
+  - atom_name: HD23
+    atom_number: 19
+    residue_name: LEU
+    residue_number: 1
+    mass: 1.0080000162124634
+    charge: 0.09799999743700027
+    element: H
+    position:
+    - 2.312000036239624
+    - 4.690000057220459
+    - 0.9660000205039978
+    velocity:
+    - 3.2450969219207764
+    - -1.507657766342163
+    - -1.8886134624481201
+    force: null
+  - atom_name: C
+    atom_number: 20
+    residue_name: LEU
+    residue_number: 1
+    mass: 12.010000228881836
+    charge: 0.6122999787330627
+    element: C
+    position:
+    - 2.186000108718872
+    - 4.583000183105469
+    - 1.371999979019165
+    velocity:
+    - 0.33575254678726196
+    - 0.3670744001865387
+    - -0.2527019679546356
+    force: null
+  - atom_name: O
+    atom_number: 21
+    residue_name: LEU
+    residue_number: 1
+    mass: 16.0
+    charge: -0.5713000297546387
+    element: O
+    position:
+    - 2.062999963760376
+    - 4.583000183105469
+    - 1.371999979019165
+    velocity:
+    - -0.39942046999931335
+    - -0.23609697818756104
+    - 0.06431783735752106
+    force: null
+  - atom_name: N
+    atom_number: 22
+    residue_name: LYS
+    residue_number: 2
+    mass: 14.010000228881836
+    charge: -0.3481000065803528
+    element: N
+    position:
+    - 2.259000062942505
+    - 4.4710001945495605
+    - 1.371999979019165
+    velocity:
+    - 0.856911301612854
+    - -0.9262830018997192
+    - -0.5396984815597534
+    force: null
+  - atom_name: H
+    atom_number: 23
+    residue_name: LYS
+    residue_number: 2
+    mass: 1.0080000162124634
+    charge: 0.27639999985694885
+    element: H
+    position:
+    - 2.3580000400543213
+    - 4.4770002365112305
+    - 1.371999979019165
+    velocity:
+    - 1.6277827024459839
+    - 0.7271314859390259
+    - -0.8814308047294617
+    force: null
+  - atom_name: CA
+    atom_number: 24
+    residue_name: LYS
+    residue_number: 2
+    mass: 12.010000228881836
+    charge: -0.29030001163482666
+    element: C
+    position:
+    - 2.197000026702881
+    - 4.339000225067139
+    - 1.371999979019165
+    velocity:
+    - 0.27430403232574463
+    - 0.04063645005226135
+    - 0.8234142065048218
+    force: null
+  - atom_name: HA
+    atom_number: 25
+    residue_name: LYS
+    residue_number: 2
+    mass: 1.0080000162124634
+    charge: 0.14380000531673431
+    element: H
+    position:
+    - 2.1429998874664307
+    - 4.3379998207092285
+    - 1.2879999876022339
+    velocity:
+    - -2.891721487045288
+    - 0.8024401664733887
+    - -0.5604680180549622
+    force: null
+  - atom_name: CB
+    atom_number: 26
+    residue_name: LYS
+    residue_number: 2
+    mass: 12.010000228881836
+    charge: -0.05380000174045563
+    element: C
+    position:
+    - 2.302000045776367
+    - 4.229000091552734
+    - 1.371999979019165
+    velocity:
+    - 0.6160593628883362
+    - -0.6784675717353821
+    - 0.08642087876796722
+    force: null
+  - atom_name: HB1
+    atom_number: 27
+    residue_name: LYS
+    residue_number: 2
+    mass: 1.0080000162124634
+    charge: 0.04820000007748604
+    element: H
+    position:
+    - 2.3589999675750732
+    - 4.23799991607666
+    - 1.4529999494552612
+    velocity:
+    - 0.7870634198188782
+    - -0.08657549321651459
+    - -0.6483016014099121
+    force: null
+  - atom_name: HB2
+    atom_number: 28
+    residue_name: LYS
+    residue_number: 2
+    mass: 1.0080000162124634
+    charge: 0.04820000007748604
+    element: H
+    position:
+    - 2.3589999675750732
+    - 4.23799991607666
+    - 1.2899999618530273
+    velocity:
+    - 0.6939597129821777
+    - -1.0015954971313477
+    - 2.969921588897705
+    force: null
+  - atom_name: CG
+    atom_number: 29
+    residue_name: LYS
+    residue_number: 2
+    mass: 12.010000228881836
+    charge: 0.022700000554323196
+    element: C
+    position:
+    - 2.2330000400543213
+    - 4.0929999351501465
+    - 1.371999979019165
+    velocity:
+    - 0.24657584726810455
+    - -0.3796088397502899
+    - 0.8050999641418457
+    force: null
+  - atom_name: HG1
+    atom_number: 30
+    residue_name: LYS
+    residue_number: 2
+    mass: 1.0080000162124634
+    charge: 0.013399999588727951
+    element: H
+    position:
+    - 2.1760001182556152
+    - 4.085000038146973
+    - 1.2899999618530273
+    velocity:
+    - -0.47207504510879517
+    - 2.5186266899108887
+    - 0.40811365842819214
+    force: null
+  - atom_name: HG2
+    atom_number: 31
+    residue_name: LYS
+    residue_number: 2
+    mass: 1.0080000162124634
+    charge: 0.013399999588727951
+    element: H
+    position:
+    - 2.1760001182556152
+    - 4.085000038146973
+    - 1.4529999494552612
+    velocity:
+    - -1.8685338497161865
+    - -0.5143736600875854
+    - -0.7536081075668335
+    force: null
+  - atom_name: CD
+    atom_number: 32
+    residue_name: LYS
+    residue_number: 2
+    mass: 12.010000228881836
+    charge: -0.03920000046491623
+    element: C
+    position:
+    - 2.3389999866485596
+    - 3.9830000400543213
+    - 1.371999979019165
+    velocity:
+    - 0.32698896527290344
+    - 0.2930779457092285
+    - 0.3502092659473419
+    force: null
+  - atom_name: HD1
+    atom_number: 33
+    residue_name: LYS
+    residue_number: 2
+    mass: 1.0080000162124634
+    charge: 0.06109999865293503
+    element: H
+    position:
+    - 2.3959999084472656
+    - 3.990999937057495
+    - 1.4529999494552612
+    velocity:
+    - 0.42569348216056824
+    - -1.3954131603240967
+    - -3.059882402420044
+    force: null
+  - atom_name: HD2
+    atom_number: 34
+    residue_name: LYS
+    residue_number: 2
+    mass: 1.0080000162124634
+    charge: 0.06109999865293503
+    element: H
+    position:
+    - 2.3959999084472656
+    - 3.990999937057495
+    - 1.2899999618530273
+    velocity:
+    - -0.7449145913124084
+    - -1.1342799663543701
+    - -0.3510212004184723
+    force: null
+  - atom_name: CE
+    atom_number: 35
+    residue_name: LYS
+    residue_number: 2
+    mass: 12.010000228881836
+    charge: -0.01759999990463257
+    element: C
+    position:
+    - 2.2699999809265137
+    - 3.8469998836517334
+    - 1.371999979019165
+    velocity:
+    - -0.07906492799520493
+    - 0.372568279504776
+    - -0.4362153708934784
+    force: null
+  - atom_name: HE1
+    atom_number: 36
+    residue_name: LYS
+    residue_number: 2
+    mass: 1.0080000162124634
+    charge: 0.11209999769926071
+    element: H
+    position:
+    - 2.2130000591278076
+    - 3.8369998931884766
+    - 1.2899999618530273
+    velocity:
+    - 1.3242545127868652
+    - 0.34460723400115967
+    - -1.724715232849121
+    force: null
+  - atom_name: HE2
+    atom_number: 37
+    residue_name: LYS
+    residue_number: 2
+    mass: 1.0080000162124634
+    charge: 0.11209999769926071
+    element: H
+    position:
+    - 2.2130000591278076
+    - 3.8369998931884766
+    - 1.4529999494552612
+    velocity:
+    - 0.5872413516044617
+    - -1.5235743522644043
+    - -0.2584194540977478
+    force: null
+  - atom_name: NZ
+    atom_number: 38
+    residue_name: LYS
+    residue_number: 2
+    mass: 14.010000228881836
+    charge: -0.374099999666214
+    element: N
+    position:
+    - 2.371000051498413
+    - 3.740999937057495
+    - 1.371999979019165
+    velocity:
+    - -0.004824308678507805
+    - 0.09936577826738358
+    - -0.08662006258964539
+    force: null
+  - atom_name: HZ1
+    atom_number: 39
+    residue_name: LYS
+    residue_number: 2
+    mass: 1.0080000162124634
+    charge: 0.33739998936653137
+    element: H
+    position:
+    - 2.3259999752044678
+    - 3.6510000228881836
+    - 1.371999979019165
+    velocity:
+    - 1.362354040145874
+    - -0.14062441885471344
+    - 1.2609807252883911
+    force: null
+  - atom_name: HZ2
+    atom_number: 40
+    residue_name: LYS
+    residue_number: 2
+    mass: 1.0080000162124634
+    charge: 0.33739998936653137
+    element: H
+    position:
+    - 2.428999900817871
+    - 3.749000072479248
+    - 1.2899999618530273
+    velocity:
+    - 0.30749431252479553
+    - -0.20507773756980896
+    - 2.178175687789917
+    force: null
+  - atom_name: HZ3
+    atom_number: 41
+    residue_name: LYS
+    residue_number: 2
+    mass: 1.0080000162124634
+    charge: 0.33739998936653137
+    element: H
+    position:
+    - 2.428999900817871
+    - 3.749000072479248
+    - 1.4529999494552612
+    velocity:
+    - -2.271160364151001
+    - 0.3058689534664154
+    - 1.568071961402893
+    force: null
+  - atom_name: C
+    atom_number: 42
+    residue_name: LYS
+    residue_number: 2
+    mass: 12.010000228881836
+    charge: 0.848800003528595
+    element: C
+    position:
+    - 2.1089999675750732
+    - 4.320000171661377
+    - 1.4950000047683716
+    velocity:
+    - -0.9985971450805664
+    - 0.1808394491672516
+    - -0.056564152240753174
+    force: null
+  - atom_name: OC1
+    atom_number: 43
+    residue_name: LYS
+    residue_number: 2
+    mass: 16.0
+    charge: -0.8252000212669373
+    element: O
+    position:
+    - 2.0490000247955322
+    - 4.215000152587891
+    - 1.5119999647140503
+    velocity:
+    - 0.2639103829860687
+    - -0.5295577645301819
+    - 0.19369295239448547
+    force: null
+  - atom_name: OC2
+    atom_number: 44
+    residue_name: LYS
+    residue_number: 2
+    mass: 16.0
+    charge: -0.8252000212669373
+    element: O
+    position:
+    - 2.0980000495910645
+    - 4.409999847412109
+    - 1.5779999494552612
+    velocity:
+    - -0.08502880483865738
+    - 0.00041956454515457153
+    - 0.4167265295982361
+    force: null
+  - atom_name: N
+    atom_number: 45
+    residue_name: POPC
+    residue_number: 3
+    mass: 14.006999969482422
+    charge: 0.20000000298023224
+    element: N
+    position:
+    - 5.27400016784668
+    - 4.5879998207092285
+    - 7.020999908447266
+    velocity:
+    - -0.5304086208343506
+    - -0.18844333291053772
+    - 0.977511465549469
+    force: null
+  - atom_name: C12
+    atom_number: 46
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: -0.20000000298023224
+    element: C
+    position:
+    - 5.39300012588501
+    - 4.681000232696533
+    - 7.0229997634887695
+    velocity:
+    - -0.26670631766319275
+    - 0.7963661551475525
+    - -0.07973017543554306
+    force: null
+  - atom_name: C13
+    atom_number: 47
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: -0.3799999952316284
+    element: C
+    position:
+    - 5.303999900817871
+    - 4.485000133514404
+    - 6.914000034332275
+    velocity:
+    - 0.4544201195240021
+    - 0.08269158005714417
+    - 0.6137529015541077
+    force: null
+  - atom_name: C14
+    atom_number: 48
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: -0.3799999952316284
+    element: C
+    position:
+    - 5.260000228881836
+    - 4.506999969482422
+    - 7.146999835968018
+    velocity:
+    - -0.3075730800628662
+    - -0.18431781232357025
+    - -0.7002299427986145
+    force: null
+  - atom_name: C15
+    atom_number: 49
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: -0.3799999952316284
+    element: C
+    position:
+    - 5.15500020980835
+    - 4.673999786376953
+    - 6.986999988555908
+    velocity:
+    - 0.16040077805519104
+    - 0.2605111598968506
+    - 0.27127501368522644
+    force: null
+  - atom_name: H12A
+    atom_number: 50
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.09000000357627869
+    element: H
+    position:
+    - 5.388000011444092
+    - 4.73199987411499
+    - 6.927999973297119
+    velocity:
+    - 0.9012988805770874
+    - 2.5766689777374268
+    - 1.0762088298797607
+    force: null
+  - atom_name: H12B
+    atom_number: 51
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.09000000357627869
+    element: H
+    position:
+    - 5.482999801635742
+    - 4.622000217437744
+    - 7.008999824523926
+    velocity:
+    - 1.6800228357315063
+    - -0.2857232689857483
+    - -0.17602211236953735
+    force: null
+  - atom_name: H13A
+    atom_number: 52
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.1899999976158142
+    element: H
+    position:
+    - 5.392000198364258
+    - 4.434999942779541
+    - 6.951000213623047
+    velocity:
+    - 0.08278762549161911
+    - 0.47411832213401794
+    - 0.24620218575000763
+    force: null
+  - atom_name: H13B
+    atom_number: 53
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.1899999976158142
+    element: H
+    position:
+    - 5.2170000076293945
+    - 4.421000003814697
+    - 6.9039998054504395
+    velocity:
+    - 1.9829866886138916
+    - -1.369838833808899
+    - -2.190553903579712
+    force: null
+  - atom_name: H13C
+    atom_number: 54
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.1899999976158142
+    element: H
+    position:
+    - 5.335000038146973
+    - 4.539000034332275
+    - 6.826000213623047
+    velocity:
+    - -0.22856949269771576
+    - 0.7067899107933044
+    - -1.083890676498413
+    force: null
+  - atom_name: H14A
+    atom_number: 55
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.1899999976158142
+    element: H
+    position:
+    - 5.236999988555908
+    - 4.574999809265137
+    - 7.228000164031982
+    velocity:
+    - -0.5358694195747375
+    - -1.5266975164413452
+    - -1.5786792039871216
+    force: null
+  - atom_name: H14B
+    atom_number: 56
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.1899999976158142
+    element: H
+    position:
+    - 5.176000118255615
+    - 4.440000057220459
+    - 7.15500020980835
+    velocity:
+    - -2.06252384185791
+    - -2.9429259300231934
+    - -0.48784032464027405
+    force: null
+  - atom_name: H14C
+    atom_number: 57
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.1899999976158142
+    element: H
+    position:
+    - 5.3470001220703125
+    - 4.447000026702881
+    - 7.173999786376953
+    velocity:
+    - 0.2811109125614166
+    - 2.127429485321045
+    - -1.7836036682128906
+    force: null
+  - atom_name: H15A
+    atom_number: 58
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.1899999976158142
+    element: H
+    position:
+    - 5.138000011444092
+    - 4.748000144958496
+    - 7.063000202178955
+    velocity:
+    - -1.0122507810592651
+    - 3.637275218963623
+    - -0.7907750606536865
+    force: null
+  - atom_name: H15B
+    atom_number: 59
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.1899999976158142
+    element: H
+    position:
+    - 5.064000129699707
+    - 4.616000175476074
+    - 6.980000019073486
+    velocity:
+    - -1.7351953983306885
+    - -2.665562868118286
+    - -0.7659530639648438
+    force: null
+  - atom_name: H15C
+    atom_number: 60
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.1899999976158142
+    element: H
+    position:
+    - 5.171000003814697
+    - 4.711999893188477
+    - 6.88700008392334
+    velocity:
+    - -1.1804683208465576
+    - 1.985687255859375
+    - -0.10416869074106216
+    force: null
+  - atom_name: C11
+    atom_number: 61
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.17000000178813934
+    element: C
+    position:
+    - 5.40500020980835
+    - 4.789000034332275
+    - 7.130000114440918
+    velocity:
+    - -0.522081196308136
+    - -0.2810441553592682
+    - 0.10161418467760086
+    force: null
+  - atom_name: H11A
+    atom_number: 62
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.029999999329447746
+    element: H
+    position:
+    - 5.386000156402588
+    - 4.744999885559082
+    - 7.230000019073486
+    velocity:
+    - 0.5737937688827515
+    - -0.5967807769775391
+    - -0.9534933567047119
+    force: null
+  - atom_name: H11B
+    atom_number: 63
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.029999999329447746
+    element: H
+    position:
+    - 5.320000171661377
+    - 4.85699987411499
+    - 7.109000205993652
+    velocity:
+    - -1.288252592086792
+    - -1.7756247520446777
+    - -0.6381891965866089
+    force: null
+  - atom_name: P
+    atom_number: 64
+    residue_name: POPC
+    residue_number: 3
+    mass: 30.974000930786133
+    charge: 1.5800000429153442
+    element: P
+    position:
+    - 5.658999919891357
+    - 4.827000141143799
+    - 7.065000057220459
+    velocity:
+    - 0.12009114772081375
+    - -0.4470520615577698
+    - 0.13407717645168304
+    force: null
+  - atom_name: O13
+    atom_number: 65
+    residue_name: POPC
+    residue_number: 3
+    mass: 15.99940013885498
+    charge: -0.8600000143051147
+    element: O
+    position:
+    - 5.763999938964844
+    - 4.927999973297119
+    - 7.085999965667725
+    velocity:
+    - 0.2981800138950348
+    - 0.18009129166603088
+    - -0.23925399780273438
+    force: null
+  - atom_name: O14
+    atom_number: 66
+    residue_name: POPC
+    residue_number: 3
+    mass: 15.99940013885498
+    charge: -0.8600000143051147
+    element: O
+    position:
+    - 5.689000129699707
+    - 4.688000202178955
+    - 7.107999801635742
+    velocity:
+    - -0.3986261785030365
+    - 0.4533672630786896
+    - -0.18677368760108948
+    force: null
+  - atom_name: O12
+    atom_number: 67
+    residue_name: POPC
+    residue_number: 3
+    mass: 15.99940013885498
+    charge: -0.49000000953674316
+    element: O
+    position:
+    - 5.52400016784668
+    - 4.868000030517578
+    - 7.139999866485596
+    velocity:
+    - 0.24662324786186218
+    - -0.277506023645401
+    - 0.3516320288181305
+    force: null
+  - atom_name: O11
+    atom_number: 68
+    residue_name: POPC
+    residue_number: 3
+    mass: 15.99940013885498
+    charge: -0.49000000953674316
+    element: O
+    position:
+    - 5.605000019073486
+    - 4.840000152587891
+    - 6.914000034332275
+    velocity:
+    - 0.3587050139904022
+    - -0.2872467041015625
+    - -0.392762154340744
+    force: null
+  - atom_name: C1
+    atom_number: 69
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: -0.10999999940395355
+    element: C
+    position:
+    - 5.6570000648498535
+    - 4.747000217437744
+    - 6.817999839782715
+    velocity:
+    - -0.09157069772481918
+    - -0.3880006968975067
+    - -0.7949100136756897
+    force: null
+  - atom_name: HA
+    atom_number: 70
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.07000000029802322
+    element: H
+    position:
+    - 5.576000213623047
+    - 4.678999900817871
+    - 6.784999847412109
+    velocity:
+    - 2.8507697582244873
+    - -0.9510924220085144
+    - -1.727735161781311
+    force: null
+  - atom_name: HB
+    atom_number: 71
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.07000000029802322
+    element: H
+    position:
+    - 5.732999801635742
+    - 4.678999900817871
+    - 6.86299991607666
+    velocity:
+    - -1.5869332551956177
+    - -0.11581269651651382
+    - -1.5172516107559204
+    force: null
+  - atom_name: C2
+    atom_number: 72
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.47999998927116394
+    element: C
+    position:
+    - 5.71999979019165
+    - 4.815999984741211
+    - 6.696000099182129
+    velocity:
+    - 0.6383011341094971
+    - 0.32266518473625183
+    - -0.32828521728515625
+    force: null
+  - atom_name: HS
+    atom_number: 73
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.03999999910593033
+    element: H
+    position:
+    - 5.642000198364258
+    - 4.879000186920166
+    - 6.64900016784668
+    velocity:
+    - 1.7402615547180176
+    - 3.9170382022857666
+    - 0.3583984673023224
+    force: null
+  - atom_name: O21
+    atom_number: 74
+    residue_name: POPC
+    residue_number: 3
+    mass: 15.99940013885498
+    charge: -0.4699999988079071
+    element: O
+    position:
+    - 5.749000072479248
+    - 4.714000225067139
+    - 6.599999904632568
+    velocity:
+    - 0.27033063769340515
+    - -0.05872683227062225
+    - 0.01580512337386608
+    force: null
+  - atom_name: C21
+    atom_number: 75
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.7900000214576721
+    element: C
+    position:
+    - 5.868000030517578
+    - 4.683000087738037
+    - 6.550000190734863
+    velocity:
+    - -0.016156915575265884
+    - -0.0611962229013443
+    - 0.8091797828674316
+    force: null
+  - atom_name: O22
+    atom_number: 76
+    residue_name: POPC
+    residue_number: 3
+    mass: 15.99940013885498
+    charge: -0.6499999761581421
+    element: O
+    position:
+    - 5.979000091552734
+    - 4.718999862670898
+    - 6.584000110626221
+    velocity:
+    - -0.3588767945766449
+    - -0.07006926834583282
+    - -0.675509512424469
+    force: null
+  - atom_name: C22
+    atom_number: 77
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: -0.05999999865889549
+    element: C
+    position:
+    - 5.8429999351501465
+    - 4.584000110626221
+    - 6.435999870300293
+    velocity:
+    - -0.25337034463882446
+    - -1.069117784500122
+    - 0.06972604244947433
+    force: null
+  - atom_name: H2R
+    atom_number: 78
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.029999999329447746
+    element: H
+    position:
+    - 5.734000205993652
+    - 4.567999839782715
+    - 6.423999786376953
+    velocity:
+    - -0.11302398890256882
+    - 2.7008750438690186
+    - 2.549999713897705
+    force: null
+  - atom_name: H2S
+    atom_number: 79
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.029999999329447746
+    element: H
+    position:
+    - 5.872000217437744
+    - 4.486999988555908
+    - 6.480999946594238
+    velocity:
+    - 1.0656318664550781
+    - 2.3390626907348633
+    - 0.34241539239883423
+    force: null
+  - atom_name: C3
+    atom_number: 80
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.12999999523162842
+    element: C
+    position:
+    - 5.831999778747559
+    - 4.916999816894531
+    - 6.728000164031982
+    velocity:
+    - -0.5038816928863525
+    - 0.31712448596954346
+    - 0.012285096570849419
+    force: null
+  - atom_name: HX
+    atom_number: 81
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.05999999865889549
+    element: H
+    position:
+    - 5.9120001792907715
+    - 4.855000019073486
+    - 6.7729997634887695
+    velocity:
+    - 0.010602437891066074
+    - -0.8026158213615417
+    - 1.2260668277740479
+    force: null
+  - atom_name: HY
+    atom_number: 82
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.05999999865889549
+    element: H
+    position:
+    - 5.781000137329102
+    - 4.986000061035156
+    - 6.797999858856201
+    velocity:
+    - 0.04322236776351929
+    - -1.9279133081436157
+    - 0.4450865685939789
+    force: null
+  - atom_name: O31
+    atom_number: 83
+    residue_name: POPC
+    residue_number: 3
+    mass: 15.99940013885498
+    charge: -0.4699999988079071
+    element: O
+    position:
+    - 5.892000198364258
+    - 4.979000091552734
+    - 6.613999843597412
+    velocity:
+    - -0.0636654794216156
+    - 0.15476875007152557
+    - 0.9584166407585144
+    force: null
+  - atom_name: C31
+    atom_number: 84
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.7900000214576721
+    element: C
+    position:
+    - 5.964000225067139
+    - 5.090000152587891
+    - 6.633999824523926
+    velocity:
+    - 0.549065113067627
+    - 0.31006136536598206
+    - 0.22910000383853912
+    force: null
+  - atom_name: O32
+    atom_number: 85
+    residue_name: POPC
+    residue_number: 3
+    mass: 15.99940013885498
+    charge: -0.6499999761581421
+    element: O
+    position:
+    - 5.958000183105469
+    - 5.15500020980835
+    - 6.736999988555908
+    velocity:
+    - -0.14320185780525208
+    - 0.11300048977136612
+    - 0.20708775520324707
+    force: null
+  - atom_name: C32
+    atom_number: 86
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: -0.05999999865889549
+    element: C
+    position:
+    - 6.052000045776367
+    - 5.119999885559082
+    - 6.513000011444092
+    velocity:
+    - -0.17928914725780487
+    - -0.4522446393966675
+    - 0.18145355582237244
+    force: null
+  - atom_name: H2X
+    atom_number: 87
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.029999999329447746
+    element: H
+    position:
+    - 5.995999813079834
+    - 5.103000164031982
+    - 6.418000221252441
+    velocity:
+    - -3.46168851852417
+    - 0.12507399916648865
+    - 2.6341466903686523
+    force: null
+  - atom_name: H2Y
+    atom_number: 88
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.029999999329447746
+    element: H
+    position:
+    - 6.144000053405762
+    - 5.059000015258789
+    - 6.5229997634887695
+    velocity:
+    - -0.04919714853167534
+    - 0.7709097862243652
+    - 1.3162468671798706
+    force: null
+  - atom_name: C23
+    atom_number: 89
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.0
+    element: C
+    position:
+    - 5.927000045776367
+    - 4.613999843597412
+    - 6.311999797821045
+    velocity:
+    - 0.38139596581459045
+    - 1.0650134086608887
+    - 0.48575153946876526
+    force: null
+  - atom_name: H3R
+    atom_number: 90
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 5.916999816894531
+    - 4.519999980926514
+    - 6.254000186920166
+    velocity:
+    - 0.7007436156272888
+    - -3.0149290561676025
+    - -0.8113211989402771
+    force: null
+  - atom_name: H3S
+    atom_number: 91
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.035999774932861
+    - 4.61899995803833
+    - 6.331999778747559
+    velocity:
+    - 1.0435975790023804
+    - -2.5067379474639893
+    - 1.9544404745101929
+    force: null
+  - atom_name: C24
+    atom_number: 92
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.0
+    element: C
+    position:
+    - 5.883999824523926
+    - 4.730999946594238
+    - 6.2230000495910645
+    velocity:
+    - -0.10737213492393494
+    - -0.041211821138858795
+    - 0.1799611747264862
+    force: null
+  - atom_name: H4R
+    atom_number: 93
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 5.90500020980835
+    - 4.822999954223633
+    - 6.281000137329102
+    velocity:
+    - -1.0409578084945679
+    - 0.009366888552904129
+    - 2.487053394317627
+    force: null
+  - atom_name: H4S
+    atom_number: 94
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 5.77400016784668
+    - 4.711999893188477
+    - 6.2170000076293945
+    velocity:
+    - -0.6444012522697449
+    - -0.10019808262586594
+    - -0.23122777044773102
+    force: null
+  - atom_name: C25
+    atom_number: 95
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.0
+    element: C
+    position:
+    - 5.956999778747559
+    - 4.743000030517578
+    - 6.089000225067139
+    velocity:
+    - 0.4682081341743469
+    - -0.28652051091194153
+    - 0.1817680150270462
+    force: null
+  - atom_name: H5R
+    atom_number: 96
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 5.960999965667725
+    - 4.638000011444092
+    - 6.052999973297119
+    velocity:
+    - 1.1209830045700073
+    - 2.2001993656158447
+    - -1.8519648313522339
+    force: null
+  - atom_name: H5S
+    atom_number: 97
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.057000160217285
+    - 4.775000095367432
+    - 6.124000072479248
+    velocity:
+    - 1.1194103956222534
+    - -1.050346851348877
+    - -3.641688346862793
+    force: null
+  - atom_name: C26
+    atom_number: 98
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.0
+    element: C
+    position:
+    - 5.889999866485596
+    - 4.8460001945495605
+    - 5.998000144958496
+    velocity:
+    - -0.04477395489811897
+    - 0.25440239906311035
+    - -0.31831908226013184
+    force: null
+  - atom_name: H6R
+    atom_number: 99
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 5.824999809265137
+    - 4.9079999923706055
+    - 6.064000129699707
+    velocity:
+    - 1.430285096168518
+    - -1.0304263830184937
+    - 0.9367300868034363
+    force: null
+  - atom_name: H6S
+    atom_number: 100
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 5.828000068664551
+    - 4.794000148773193
+    - 5.922999858856201
+    velocity:
+    - -1.872877597808838
+    - 0.40358293056488037
+    - -0.40673208236694336
+    force: null
+  - atom_name: C27
+    atom_number: 101
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.0
+    element: C
+    position:
+    - 5.978000164031982
+    - 4.939000129699707
+    - 5.913000106811523
+    velocity:
+    - -0.15513484179973602
+    - 0.7921378016471863
+    - 0.027302278205752373
+    force: null
+  - atom_name: H7R
+    atom_number: 102
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.043000221252441
+    - 4.86299991607666
+    - 5.864999771118164
+    velocity:
+    - -0.6739270091056824
+    - 1.2803716659545898
+    - -0.15022610127925873
+    force: null
+  - atom_name: H7S
+    atom_number: 103
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.0320000648498535
+    - 5.013999938964844
+    - 5.974999904632568
+    velocity:
+    - -3.265807628631592
+    - 0.15108725428581238
+    - -4.722382545471191
+    force: null
+  - atom_name: C28
+    atom_number: 104
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.029999999329447746
+    element: C
+    position:
+    - 5.896999835968018
+    - 5.0279998779296875
+    - 5.817999839782715
+    velocity:
+    - 0.14460352063179016
+    - 0.7328592538833618
+    - 0.12391036748886108
+    force: null
+  - atom_name: H8R
+    atom_number: 105
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.029999999329447746
+    element: H
+    position:
+    - 5.8379998207092285
+    - 5.0970001220703125
+    - 5.88100004196167
+    velocity:
+    - 0.4208334982395172
+    - 0.8088375329971313
+    - -2.1539549827575684
+    force: null
+  - atom_name: H8S
+    atom_number: 106
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.029999999329447746
+    element: H
+    position:
+    - 5.828000068664551
+    - 4.964000225067139
+    - 5.760000228881836
+    velocity:
+    - -1.5615320205688477
+    - -3.450063943862915
+    - -0.5383115410804749
+    force: null
+  - atom_name: C29
+    atom_number: 107
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: -0.20000000298023224
+    element: C
+    position:
+    - 5.98799991607666
+    - 5.11299991607666
+    - 5.734000205993652
+    velocity:
+    - 0.4870888590812683
+    - -0.5426492691040039
+    - -0.5736525654792786
+    force: null
+  - atom_name: H91
+    atom_number: 108
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.10999999940395355
+    element: H
+    position:
+    - 6.068999767303467
+    - 5.164999961853027
+    - 5.788000106811523
+    velocity:
+    - -0.4813627004623413
+    - 0.5382423400878906
+    - 2.171947717666626
+    force: null
+  - atom_name: C210
+    atom_number: 109
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: -0.20000000298023224
+    element: C
+    position:
+    - 5.980999946594238
+    - 5.138000011444092
+    - 5.603000164031982
+    velocity:
+    - -0.2697364389896393
+    - -0.11920959502458572
+    - -0.3401970863342285
+    force: null
+  - atom_name: H101
+    atom_number: 110
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.10999999940395355
+    element: H
+    position:
+    - 6.051000118255615
+    - 5.210000038146973
+    - 5.556000232696533
+    velocity:
+    - 1.252518892288208
+    - 1.2911227941513062
+    - -1.3175733089447021
+    force: null
+  - atom_name: C211
+    atom_number: 111
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.029999999329447746
+    element: C
+    position:
+    - 5.877999782562256
+    - 5.093999862670898
+    - 5.504000186920166
+    velocity:
+    - 0.4562663435935974
+    - 0.6684861779212952
+    - 0.3492140769958496
+    force: null
+  - atom_name: H11R
+    atom_number: 112
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.029999999329447746
+    element: H
+    position:
+    - 5.820000171661377
+    - 5.177000045776367
+    - 5.456999778747559
+    velocity:
+    - 1.2299244403839111
+    - -0.6058257818222046
+    - -0.9351635575294495
+    force: null
+  - atom_name: H11S
+    atom_number: 113
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.029999999329447746
+    element: H
+    position:
+    - 5.795000076293945
+    - 5.0269999504089355
+    - 5.535999774932861
+    velocity:
+    - -0.3662947118282318
+    - 3.5171399116516113
+    - 0.310554176568985
+    force: null
+  - atom_name: C212
+    atom_number: 114
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.0
+    element: C
+    position:
+    - 5.953999996185303
+    - 5.002999782562256
+    - 5.4070000648498535
+    velocity:
+    - 0.004960758611559868
+    - 0.49089115858078003
+    - -0.0403575524687767
+    force: null
+  - atom_name: H12R
+    atom_number: 115
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 5.879000186920166
+    - 4.9629998207092285
+    - 5.335000038146973
+    velocity:
+    - -0.6508246064186096
+    - -3.9599318504333496
+    - -3.010530471801758
+    force: null
+  - atom_name: H12S
+    atom_number: 116
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.006999969482422
+    - 4.919000148773193
+    - 5.455999851226807
+    velocity:
+    - -1.755550742149353
+    - -3.523073434829712
+    - 0.9199904799461365
+    force: null
+  - atom_name: C213
+    atom_number: 117
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.0
+    element: C
+    position:
+    - 6.057000160217285
+    - 5.068999767303467
+    - 5.315000057220459
+    velocity:
+    - 0.2707221508026123
+    - -0.3338833749294281
+    - 0.4314049184322357
+    force: null
+  - atom_name: H13R
+    atom_number: 118
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.13100004196167
+    - 5.13100004196167
+    - 5.369999885559082
+    velocity:
+    - -1.3297359943389893
+    - -0.1988423615694046
+    - 2.30470609664917
+    force: null
+  - atom_name: H13S
+    atom_number: 119
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.000999927520752
+    - 5.14900016784668
+    - 5.26200008392334
+    velocity:
+    - 0.5930548310279846
+    - 0.6211661696434021
+    - -0.5476833581924438
+    force: null
+  - atom_name: C214
+    atom_number: 120
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.0
+    element: C
+    position:
+    - 6.132999897003174
+    - 4.968999862670898
+    - 5.229000091552734
+    velocity:
+    - -0.4999534785747528
+    - 0.4434955418109894
+    - 0.26245272159576416
+    force: null
+  - atom_name: H14R
+    atom_number: 121
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.065999984741211
+    - 4.888999938964844
+    - 5.191999912261963
+    velocity:
+    - -0.3470580577850342
+    - 0.7982746958732605
+    - 1.6592084169387817
+    force: null
+  - atom_name: H14S
+    atom_number: 122
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.204999923706055
+    - 4.908999919891357
+    - 5.289000034332275
+    velocity:
+    - 1.6249076128005981
+    - 1.5361137390136719
+    - 2.3804049491882324
+    force: null
+  - atom_name: C215
+    atom_number: 123
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.0
+    element: C
+    position:
+    - 6.209000110626221
+    - 5.046999931335449
+    - 5.120999813079834
+    velocity:
+    - -0.6722031831741333
+    - -0.023997044190764427
+    - 0.582817792892456
+    force: null
+  - atom_name: H15R
+    atom_number: 124
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.285999774932861
+    - 5.110000133514404
+    - 5.169000148773193
+    velocity:
+    - -0.28661760687828064
+    - 0.09414087980985641
+    - -2.306974411010742
+    force: null
+  - atom_name: H15S
+    atom_number: 125
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.132999897003174
+    - 5.1020002365112305
+    - 5.061999797821045
+    velocity:
+    - -3.9814276695251465
+    - 2.7327659130096436
+    - -0.5738105177879333
+    force: null
+  - atom_name: C216
+    atom_number: 126
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.0
+    element: C
+    position:
+    - 6.2729997634887695
+    - 4.934999942779541
+    - 5.038000106811523
+    velocity:
+    - 0.8465389609336853
+    - 0.31206014752388
+    - -0.42913514375686646
+    force: null
+  - atom_name: H16R
+    atom_number: 127
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.195000171661377
+    - 4.861999988555908
+    - 5.007999897003174
+    velocity:
+    - 0.6898952722549438
+    - -0.5787481665611267
+    - -2.6770825386047363
+    force: null
+  - atom_name: H16S
+    atom_number: 128
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.348999977111816
+    - 4.9019999504089355
+    - 5.111999988555908
+    velocity:
+    - -3.096224069595337
+    - 1.907645344734192
+    - 0.25046131014823914
+    force: null
+  - atom_name: C217
+    atom_number: 129
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.04699999839067459
+    element: C
+    position:
+    - 6.331999778747559
+    - 4.999000072479248
+    - 4.913000106811523
+    velocity:
+    - 0.13224980235099792
+    - 0.017795445397496223
+    - 0.5687697529792786
+    force: null
+  - atom_name: H17R
+    atom_number: 130
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: -0.007000000216066837
+    element: H
+    position:
+    - 6.256999969482422
+    - 5.060999870300293
+    - 4.859000205993652
+    velocity:
+    - -0.378724604845047
+    - -1.505340814590454
+    - 1.931152582168579
+    force: null
+  - atom_name: H17S
+    atom_number: 131
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: -0.007000000216066837
+    element: H
+    position:
+    - 6.375999927520752
+    - 4.927999973297119
+    - 4.839000225067139
+    velocity:
+    - -0.5280469059944153
+    - 1.9298443794250488
+    - 0.015209397301077843
+    force: null
+  - atom_name: C218
+    atom_number: 132
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: -0.08100000023841858
+    element: C
+    position:
+    - 6.452000141143799
+    - 5.0879998207092285
+    - 4.947000026702881
+    velocity:
+    - -0.2669583857059479
+    - -0.782375156879425
+    - 0.10094761848449707
+    force: null
+  - atom_name: H18R
+    atom_number: 133
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.01600000075995922
+    element: H
+    position:
+    - 6.53000020980835
+    - 5.010000228881836
+    - 4.947000026702881
+    velocity:
+    - -0.7608815431594849
+    - -0.2013361155986786
+    - -0.8777312636375427
+    force: null
+  - atom_name: H18S
+    atom_number: 134
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.01600000075995922
+    element: H
+    position:
+    - 6.441999912261963
+    - 5.136000156402588
+    - 5.046000003814697
+    velocity:
+    - 1.1686712503433228
+    - -0.23505577445030212
+    - -2.8277645111083984
+    force: null
+  - atom_name: H18T
+    atom_number: 135
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.01600000075995922
+    element: H
+    position:
+    - 6.4710001945495605
+    - 5.163000106811523
+    - 4.867000102996826
+    velocity:
+    - -0.5181560516357422
+    - -2.2202038764953613
+    - 0.9376139640808105
+    force: null
+  - atom_name: C33
+    atom_number: 136
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.0
+    element: C
+    position:
+    - 6.0920000076293945
+    - 5.26800012588501
+    - 6.513999938964844
+    velocity:
+    - 0.3779025375843048
+    - 0.3507658541202545
+    - -0.45731624960899353
+    force: null
+  - atom_name: H3X
+    atom_number: 137
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.14300012588501
+    - 5.308000087738037
+    - 6.605000019073486
+    velocity:
+    - 0.9280019402503967
+    - 1.8007268905639648
+    - 1.3041009902954102
+    force: null
+  - atom_name: H3Y
+    atom_number: 138
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 5.995999813079834
+    - 5.320000171661377
+    - 6.493000030517578
+    velocity:
+    - -2.235896110534668
+    - 0.1327509582042694
+    - 0.38308069109916687
+    force: null
+  - atom_name: C34
+    atom_number: 139
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.0
+    element: C
+    position:
+    - 6.173999786376953
+    - 5.313000202178955
+    - 6.39300012588501
+    velocity:
+    - -0.007923511788249016
+    - -0.5037850737571716
+    - 0.005829818546772003
+    force: null
+  - atom_name: H4X
+    atom_number: 140
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.165999889373779
+    - 5.236000061035156
+    - 6.313000202178955
+    velocity:
+    - -1.2808014154434204
+    - 0.9204843044281006
+    - 2.394679546356201
+    force: null
+  - atom_name: H4Y
+    atom_number: 141
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.2829999923706055
+    - 5.310999870300293
+    - 6.414999961853027
+    velocity:
+    - -3.252584934234619
+    - 0.6658925414085388
+    - -0.541433572769165
+    force: null
+  - atom_name: C35
+    atom_number: 142
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.0
+    element: C
+    position:
+    - 6.114999771118164
+    - 5.445000171661377
+    - 6.3429999351501465
+    velocity:
+    - -0.029555736109614372
+    - 0.8148568272590637
+    - -0.640787661075592
+    force: null
+  - atom_name: H5X
+    atom_number: 143
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.109000205993652
+    - 5.519999980926514
+    - 6.425000190734863
+    velocity:
+    - 1.840894341468811
+    - -0.17243950068950653
+    - 0.9523878693580627
+    force: null
+  - atom_name: H5Y
+    atom_number: 144
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.007999897003174
+    - 5.432000160217285
+    - 6.315000057220459
+    velocity:
+    - -1.1525886058807373
+    - -0.06454721838235855
+    - 1.120505928993225
+    force: null
+  - atom_name: C36
+    atom_number: 145
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.0
+    element: C
+    position:
+    - 6.203000068664551
+    - 5.484000205993652
+    - 6.224999904632568
+    velocity:
+    - -0.660429835319519
+    - 0.048520345240831375
+    - -0.5318701267242432
+    force: null
+  - atom_name: H6X
+    atom_number: 146
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.235000133514404
+    - 5.396999835968018
+    - 6.164999961853027
+    velocity:
+    - -1.5276085138320923
+    - 0.6693738698959351
+    - -1.05521559715271
+    force: null
+  - atom_name: H6Y
+    atom_number: 147
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.302000045776367
+    - 5.525000095367432
+    - 6.256999969482422
+    velocity:
+    - -0.9396371245384216
+    - 0.012578939087688923
+    - -0.6014009118080139
+    force: null
+  - atom_name: C37
+    atom_number: 148
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.0
+    element: C
+    position:
+    - 6.124000072479248
+    - 5.578999996185303
+    - 6.135000228881836
+    velocity:
+    - -0.5730898976325989
+    - -0.9662528038024902
+    - 0.28337958455085754
+    force: null
+  - atom_name: H7X
+    atom_number: 149
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.072999954223633
+    - 5.6539998054504395
+    - 6.198999881744385
+    velocity:
+    - -1.751102089881897
+    - -3.35669207572937
+    - -0.0730092003941536
+    force: null
+  - atom_name: H7Y
+    atom_number: 150
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.048999786376953
+    - 5.521999835968018
+    - 6.077000141143799
+    velocity:
+    - -1.8389705419540405
+    - 2.1543595790863037
+    - 1.2384206056594849
+    force: null
+  - atom_name: C38
+    atom_number: 151
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.0
+    element: C
+    position:
+    - 6.209000110626221
+    - 5.6539998054504395
+    - 6.031000137329102
+    velocity:
+    - -0.09091464430093765
+    - -0.5183582901954651
+    - -0.06539899110794067
+    force: null
+  - atom_name: H8X
+    atom_number: 152
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.261000156402588
+    - 5.585999965667725
+    - 5.961999893188477
+    velocity:
+    - 0.7792775630950928
+    - -0.2596026360988617
+    - -3.269829034805298
+    force: null
+  - atom_name: H8Y
+    atom_number: 153
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.288000106811523
+    - 5.710000038146973
+    - 6.085000038146973
+    velocity:
+    - 1.3284125328063965
+    - 4.3641815185546875
+    - -1.565746545791626
+    force: null
+  - atom_name: C39
+    atom_number: 154
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.0
+    element: C
+    position:
+    - 6.125
+    - 5.756999969482422
+    - 5.954999923706055
+    velocity:
+    - -0.028623659163713455
+    - 0.05210691690444946
+    - 0.23116667568683624
+    force: null
+  - atom_name: H9X
+    atom_number: 155
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.086999893188477
+    - 5.831999778747559
+    - 6.0279998779296875
+    velocity:
+    - 1.0539782047271729
+    - -3.1944665908813477
+    - -0.09575800597667694
+    force: null
+  - atom_name: H9Y
+    atom_number: 156
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.044000148773193
+    - 5.714000225067139
+    - 5.892000198364258
+    velocity:
+    - -0.43866273760795593
+    - 1.9513990879058838
+    - 0.6791846752166748
+    force: null
+  - atom_name: C310
+    atom_number: 157
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.0
+    element: C
+    position:
+    - 6.218999862670898
+    - 5.839000225067139
+    - 5.866000175476074
+    velocity:
+    - 0.09863529354333878
+    - -0.3357907831668854
+    - 0.9914771914482117
+    force: null
+  - atom_name: H10X
+    atom_number: 158
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.298999786376953
+    - 5.7829999923706055
+    - 5.814000129699707
+    velocity:
+    - -0.9528287053108215
+    - 0.1443951427936554
+    - -2.2333433628082275
+    force: null
+  - atom_name: H10Y
+    atom_number: 159
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.27400016784668
+    - 5.9120001792907715
+    - 5.929999828338623
+    velocity:
+    - -0.5928404927253723
+    - 0.3675847351551056
+    - -1.7403115034103394
+    force: null
+  - atom_name: C311
+    atom_number: 160
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.0
+    element: C
+    position:
+    - 6.139999866485596
+    - 5.914999961853027
+    - 5.758999824523926
+    velocity:
+    - -1.0258067846298218
+    - 0.5867846012115479
+    - 0.24333684146404266
+    force: null
+  - atom_name: H11X
+    atom_number: 161
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.073999881744385
+    - 5.8379998207092285
+    - 5.715000152587891
+    velocity:
+    - -0.18348830938339233
+    - -3.480480909347534
+    - 0.1944808065891266
+    force: null
+  - atom_name: H11Y
+    atom_number: 162
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.214000225067139
+    - 5.954999923706055
+    - 5.686999797821045
+    velocity:
+    - -0.10311949998140335
+    - -1.07851243019104
+    - 0.40197381377220154
+    force: null
+  - atom_name: C312
+    atom_number: 163
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.0
+    element: C
+    position:
+    - 6.048999786376953
+    - 6.026000022888184
+    - 5.810999870300293
+    velocity:
+    - 0.25876596570014954
+    - -0.7490062117576599
+    - -0.708550751209259
+    force: null
+  - atom_name: H12X
+    atom_number: 164
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.10699987411499
+    - 6.103000164031982
+    - 5.866000175476074
+    velocity:
+    - -2.050314426422119
+    - 2.383598804473877
+    - -0.6246551275253296
+    force: null
+  - atom_name: H12Y
+    atom_number: 165
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 5.965000152587891
+    - 5.98799991607666
+    - 5.874000072479248
+    velocity:
+    - -1.0406538248062134
+    - -0.5615805387496948
+    - -3.424135446548462
+    force: null
+  - atom_name: C313
+    atom_number: 166
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.0
+    element: C
+    position:
+    - 5.988999843597412
+    - 6.093999862670898
+    - 5.688000202178955
+    velocity:
+    - 0.22627313435077667
+    - 0.20065496861934662
+    - -0.4139552414417267
+    force: null
+  - atom_name: H13X
+    atom_number: 167
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 5.89300012588501
+    - 6.146999835968018
+    - 5.705999851226807
+    velocity:
+    - 0.31781843304634094
+    - 0.27729952335357666
+    - -3.181384325027466
+    force: null
+  - atom_name: H13Y
+    atom_number: 168
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 5.965000152587891
+    - 6.017000198364258
+    - 5.61299991607666
+    velocity:
+    - -2.2275638580322266
+    - -0.9907550811767578
+    - -0.3762916922569275
+    force: null
+  - atom_name: C314
+    atom_number: 169
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.0
+    element: C
+    position:
+    - 6.081999778747559
+    - 6.197000026702881
+    - 5.623000144958496
+    velocity:
+    - -0.09572985768318176
+    - -0.4915189743041992
+    - 0.03198213130235672
+    force: null
+  - atom_name: H14X
+    atom_number: 170
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.173999786376953
+    - 6.139999866485596
+    - 5.598999977111816
+    velocity:
+    - -0.6917502284049988
+    - 1.4346544742584229
+    - -0.1130765900015831
+    force: null
+  - atom_name: H14Y
+    atom_number: 171
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.0
+    element: H
+    position:
+    - 6.1020002365112305
+    - 6.276000022888184
+    - 5.698999881744385
+    velocity:
+    - 2.037757158279419
+    - 1.2656794786453247
+    - 0.7540575861930847
+    force: null
+  - atom_name: C315
+    atom_number: 172
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: 0.04699999839067459
+    element: C
+    position:
+    - 6.015999794006348
+    - 6.263000011444092
+    - 5.502999782562256
+    velocity:
+    - 0.22474268078804016
+    - 0.40852612257003784
+    - 0.3609806001186371
+    force: null
+  - atom_name: H15X
+    atom_number: 173
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: -0.007000000216066837
+    element: H
+    position:
+    - 5.925000190734863
+    - 6.318999767303467
+    - 5.534999847412109
+    velocity:
+    - -1.6522215604782104
+    - 0.770359218120575
+    - -0.0028298888355493546
+    force: null
+  - atom_name: H15Y
+    atom_number: 174
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: -0.007000000216066837
+    element: H
+    position:
+    - 5.989999771118164
+    - 6.176000118255615
+    - 5.440000057220459
+    velocity:
+    - -3.0946764945983887
+    - 1.31211519241333
+    - -1.4262572526931763
+    force: null
+  - atom_name: C316
+    atom_number: 175
+    residue_name: POPC
+    residue_number: 3
+    mass: 12.01099967956543
+    charge: -0.08100000023841858
+    element: C
+    position:
+    - 6.10699987411499
+    - 6.359000205993652
+    - 5.426000118255615
+    velocity:
+    - 0.08680006861686707
+    - -0.46884921193122864
+    - 0.185311958193779
+    force: null
+  - atom_name: H16X
+    atom_number: 176
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.01600000075995922
+    element: H
+    position:
+    - 6.184999942779541
+    - 6.392000198364258
+    - 5.498000144958496
+    velocity:
+    - -0.03683924674987793
+    - -1.547536849975586
+    - -1.4476673603057861
+    force: null
+  - atom_name: H16Y
+    atom_number: 177
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.01600000075995922
+    element: H
+    position:
+    - 6.045000076293945
+    - 6.441999912261963
+    - 5.388000011444092
+    velocity:
+    - 1.956438422203064
+    - 1.420923113822937
+    - 0.2750517427921295
+    force: null
+  - atom_name: H16Z
+    atom_number: 178
+    residue_name: POPC
+    residue_number: 3
+    mass: 1.0080000162124634
+    charge: 0.01600000075995922
+    element: H
+    position:
+    - 6.163000106811523
+    - 6.318999767303467
+    - 5.339000225067139
+    velocity:
+    - -3.9366796016693115
+    - 0.23259927332401276
+    - 0.16982561349868774
+    force: null
+  - atom_name: OW
+    atom_number: 179
+    residue_name: SOL
+    residue_number: 4
+    mass: 16.0
+    charge: -0.8339999914169312
+    element: O
+    position:
+    - 4.921000003814697
+    - 4.664999961853027
+    - 8.729000091552734
+    velocity:
+    - -0.23695795238018036
+    - 0.1700093299150467
+    - 0.22243374586105347
+    force: null
+  - atom_name: HW1
+    atom_number: 180
+    residue_name: SOL
+    residue_number: 4
+    mass: 1.0080000162124634
+    charge: 0.4169999957084656
+    element: H
+    position:
+    - 4.980000019073486
+    - 4.671000003814697
+    - 8.654000282287598
+    velocity:
+    - 0.06695675104856491
+    - 1.4248874187469482
+    - 1.3453576564788818
+    force: null
+  - atom_name: HW2
+    atom_number: 181
+    residue_name: SOL
+    residue_number: 4
+    mass: 1.0080000162124634
+    charge: 0.4169999957084656
+    element: H
+    position:
+    - 4.940000057220459
+    - 4.578999996185303
+    - 8.767000198364258
+    velocity:
+    - -0.46228814125061035
+    - -0.5023841857910156
+    - 0.7844142913818359
+    force: null
+  - atom_name: CL
+    atom_number: 182
+    residue_name: CL
+    residue_number: 5
+    mass: 35.45000076293945
+    charge: -1.0
+    element: Cl
+    position:
+    - 2.311000108718872
+    - 10.982999801635742
+    - 8.125
+    velocity:
+    - -0.13467523455619812
+    - 0.1585075557231903
+    - 0.16491800546646118
+    force: null
+  bonds:
+  - atom1: 0
+    atom2: 1
+  - atom1: 0
+    atom2: 2
+  - atom1: 0
+    atom2: 3
+  - atom1: 0
+    atom2: 4
+  - atom1: 4
+    atom2: 5
+  - atom1: 4
+    atom2: 6
+  - atom1: 4
+    atom2: 19
+  - atom1: 6
+    atom2: 7
+  - atom1: 6
+    atom2: 8
+  - atom1: 6
+    atom2: 9
+  - atom1: 9
+    atom2: 10
+  - atom1: 9
+    atom2: 11
+  - atom1: 9
+    atom2: 15
+  - atom1: 11
+    atom2: 12
+  - atom1: 11
+    atom2: 13
+  - atom1: 11
+    atom2: 14
+  - atom1: 15
+    atom2: 16
+  - atom1: 15
+    atom2: 17
+  - atom1: 15
+    atom2: 18
+  - atom1: 19
+    atom2: 20
+  - atom1: 19
+    atom2: 21
+  - atom1: 21
+    atom2: 22
+  - atom1: 21
+    atom2: 23
+  - atom1: 23
+    atom2: 24
+  - atom1: 23
+    atom2: 25
+  - atom1: 23
+    atom2: 41
+  - atom1: 25
+    atom2: 26
+  - atom1: 25
+    atom2: 27
+  - atom1: 25
+    atom2: 28
+  - atom1: 28
+    atom2: 29
+  - atom1: 28
+    atom2: 30
+  - atom1: 28
+    atom2: 31
+  - atom1: 31
+    atom2: 32
+  - atom1: 31
+    atom2: 33
+  - atom1: 31
+    atom2: 34
+  - atom1: 34
+    atom2: 35
+  - atom1: 34
+    atom2: 36
+  - atom1: 34
+    atom2: 37
+  - atom1: 37
+    atom2: 38
+  - atom1: 37
+    atom2: 39
+  - atom1: 37
+    atom2: 40
+  - atom1: 41
+    atom2: 42
+  - atom1: 41
+    atom2: 43
+  - atom1: 44
+    atom2: 45
+  - atom1: 44
+    atom2: 46
+  - atom1: 44
+    atom2: 47
+  - atom1: 44
+    atom2: 48
+  - atom1: 45
+    atom2: 49
+  - atom1: 45
+    atom2: 50
+  - atom1: 45
+    atom2: 60
+  - atom1: 46
+    atom2: 51
+  - atom1: 46
+    atom2: 52
+  - atom1: 46
+    atom2: 53
+  - atom1: 47
+    atom2: 54
+  - atom1: 47
+    atom2: 55
+  - atom1: 47
+    atom2: 56
+  - atom1: 48
+    atom2: 57
+  - atom1: 48
+    atom2: 58
+  - atom1: 48
+    atom2: 59
+  - atom1: 60
+    atom2: 61
+  - atom1: 60
+    atom2: 62
+  - atom1: 60
+    atom2: 66
+  - atom1: 63
+    atom2: 64
+  - atom1: 63
+    atom2: 65
+  - atom1: 63
+    atom2: 66
+  - atom1: 63
+    atom2: 67
+  - atom1: 67
+    atom2: 68
+  - atom1: 68
+    atom2: 69
+  - atom1: 68
+    atom2: 70
+  - atom1: 68
+    atom2: 71
+  - atom1: 71
+    atom2: 72
+  - atom1: 71
+    atom2: 73
+  - atom1: 71
+    atom2: 79
+  - atom1: 73
+    atom2: 74
+  - atom1: 74
+    atom2: 75
+  - atom1: 74
+    atom2: 76
+  - atom1: 76
+    atom2: 77
+  - atom1: 76
+    atom2: 78
+  - atom1: 76
+    atom2: 88
+  - atom1: 79
+    atom2: 80
+  - atom1: 79
+    atom2: 81
+  - atom1: 79
+    atom2: 82
+  - atom1: 82
+    atom2: 83
+  - atom1: 83
+    atom2: 84
+  - atom1: 83
+    atom2: 85
+  - atom1: 85
+    atom2: 86
+  - atom1: 85
+    atom2: 87
+  - atom1: 85
+    atom2: 135
+  - atom1: 88
+    atom2: 89
+  - atom1: 88
+    atom2: 90
+  - atom1: 88
+    atom2: 91
+  - atom1: 91
+    atom2: 92
+  - atom1: 91
+    atom2: 93
+  - atom1: 91
+    atom2: 94
+  - atom1: 94
+    atom2: 95
+  - atom1: 94
+    atom2: 96
+  - atom1: 94
+    atom2: 97
+  - atom1: 97
+    atom2: 98
+  - atom1: 97
+    atom2: 99
+  - atom1: 97
+    atom2: 100
+  - atom1: 100
+    atom2: 101
+  - atom1: 100
+    atom2: 102
+  - atom1: 100
+    atom2: 103
+  - atom1: 103
+    atom2: 104
+  - atom1: 103
+    atom2: 105
+  - atom1: 103
+    atom2: 106
+  - atom1: 106
+    atom2: 107
+  - atom1: 106
+    atom2: 108
+  - atom1: 108
+    atom2: 109
+  - atom1: 108
+    atom2: 110
+  - atom1: 110
+    atom2: 111
+  - atom1: 110
+    atom2: 112
+  - atom1: 110
+    atom2: 113
+  - atom1: 113
+    atom2: 114
+  - atom1: 113
+    atom2: 115
+  - atom1: 113
+    atom2: 116
+  - atom1: 116
+    atom2: 117
+  - atom1: 116
+    atom2: 118
+  - atom1: 116
+    atom2: 119
+  - atom1: 119
+    atom2: 120
+  - atom1: 119
+    atom2: 121
+  - atom1: 119
+    atom2: 122
+  - atom1: 122
+    atom2: 123
+  - atom1: 122
+    atom2: 124
+  - atom1: 122
+    atom2: 125
+  - atom1: 125
+    atom2: 126
+  - atom1: 125
+    atom2: 127
+  - atom1: 125
+    atom2: 128
+  - atom1: 128
+    atom2: 129
+  - atom1: 128
+    atom2: 130
+  - atom1: 128
+    atom2: 131
+  - atom1: 131
+    atom2: 132
+  - atom1: 131
+    atom2: 133
+  - atom1: 131
+    atom2: 134
+  - atom1: 135
+    atom2: 136
+  - atom1: 135
+    atom2: 137
+  - atom1: 135
+    atom2: 138
+  - atom1: 138
+    atom2: 139
+  - atom1: 138
+    atom2: 140
+  - atom1: 138
+    atom2: 141
+  - atom1: 141
+    atom2: 142
+  - atom1: 141
+    atom2: 143
+  - atom1: 141
+    atom2: 144
+  - atom1: 144
+    atom2: 145
+  - atom1: 144
+    atom2: 146
+  - atom1: 144
+    atom2: 147
+  - atom1: 147
+    atom2: 148
+  - atom1: 147
+    atom2: 149
+  - atom1: 147
+    atom2: 150
+  - atom1: 150
+    atom2: 151
+  - atom1: 150
+    atom2: 152
+  - atom1: 150
+    atom2: 153
+  - atom1: 153
+    atom2: 154
+  - atom1: 153
+    atom2: 155
+  - atom1: 153
+    atom2: 156
+  - atom1: 156
+    atom2: 157
+  - atom1: 156
+    atom2: 158
+  - atom1: 156
+    atom2: 159
+  - atom1: 159
+    atom2: 160
+  - atom1: 159
+    atom2: 161
+  - atom1: 159
+    atom2: 162
+  - atom1: 162
+    atom2: 163
+  - atom1: 162
+    atom2: 164
+  - atom1: 162
+    atom2: 165
+  - atom1: 165
+    atom2: 166
+  - atom1: 165
+    atom2: 167
+  - atom1: 165
+    atom2: 168
+  - atom1: 168
+    atom2: 169
+  - atom1: 168
+    atom2: 170
+  - atom1: 168
+    atom2: 171
+  - atom1: 171
+    atom2: 172
+  - atom1: 171
+    atom2: 173
+  - atom1: 171
+    atom2: 174
+  - atom1: 174
+    atom2: 175
+  - atom1: 174
+    atom2: 176
+  - atom1: 174
+    atom2: 177

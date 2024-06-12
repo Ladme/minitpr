@@ -4,8 +4,8 @@
 //! This file contains functions for obtaining system topology from a TPR file.
 
 use super::{
-    ffparams::FFParams, interactions::Interaction, molblocks::MolBlock, moltypes::MoleculeType,
-    xdr::XdrFile,
+    coordinates::Coordinates, ffparams::FFParams, interactions::Interaction, molblocks::MolBlock,
+    moltypes::MoleculeType, xdr::XdrFile,
 };
 use crate::{
     errors::ParseTprError,
@@ -24,7 +24,7 @@ impl TprTopology {
         symbol_table: &SymTable,
         ffparams: &FFParams,
         expected_n_atoms: i32,
-    ) -> Result<TprTopology, ParseTprError> {
+    ) -> Result<Self, ParseTprError> {
         // get molecule types
         let n_moltypes = xdrfile.read_i32()?;
 
@@ -159,5 +159,24 @@ impl TprTopology {
         }
 
         Ok(TprTopology { atoms, bonds })
+    }
+
+    /// Get positions, velocities, and forces for particles in the topology from the `Coordinates` structure.
+    pub(super) fn fill_with_coordinates(&mut self, coordinates: Coordinates) {
+        for (pos, atom) in coordinates.positions.into_iter().zip(self.atoms.iter_mut()) {
+            atom.position = Some(pos);
+        }
+
+        for (vel, atom) in coordinates
+            .velocities
+            .into_iter()
+            .zip(self.atoms.iter_mut())
+        {
+            atom.velocity = Some(vel);
+        }
+
+        for (force, atom) in coordinates.forces.into_iter().zip(self.atoms.iter_mut()) {
+            atom.force = Some(force);
+        }
     }
 }

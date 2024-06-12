@@ -19,8 +19,6 @@ pub struct TprFile {
     pub simbox: Option<SimBox>,
     /// System topology.
     pub topology: TprTopology,
-    /// Positions, velocities, and forces.
-    pub coordinates: TprCoordinates,
 }
 
 /// Structure representing the header of the TPR file.
@@ -72,19 +70,6 @@ pub struct TprTopology {
     pub bonds: Vec<Bond>,
 }
 
-/// Structure holding the parsed positions, velocities, and forces of particles.
-/// If the vector is empty, the corresponding properties are not present in the tpr file.
-#[derive(Debug, Clone)]
-#[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
-pub struct TprCoordinates {
-    /// Positions of particles in the system.
-    pub positions: Vec<[f64; 3]>,
-    /// Velocities of particles in the system.
-    pub velocities: Vec<[f64; 3]>,
-    /// Forces acting upon the particles of the system.
-    pub forces: Vec<[f64; 3]>,
-}
-
 /// Structure representing simulation box dimensions.
 #[derive(Debug, Clone)]
 #[cfg_attr(feature = "serde", derive(serde::Serialize, serde::Deserialize))]
@@ -120,6 +105,12 @@ pub struct Atom {
     pub charge: f64,
     /// Element this atom belongs to.
     pub element: Option<Element>,
+    /// Position of the atom.
+    pub position: Option<[f64; 3]>,
+    /// Velocity of the atom.
+    pub velocity: Option<[f64; 3]>,
+    /// Force acting on the atom.
+    pub force: Option<[f64; 3]>,
 }
 
 /// Structure representing a bond between atoms.

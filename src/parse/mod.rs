@@ -6,8 +6,8 @@
 use crate::{
     errors::ParseTprError,
     structures::{Precision, SimBox, TprFile, TprHeader, TprTopology},
-    TprCoordinates,
 };
+use coordinates::Coordinates;
 use std::{fs::File, io::BufReader, path::Path};
 use xdr::XdrFile;
 
@@ -60,7 +60,7 @@ pub(crate) fn parse_tpr(filename: impl AsRef<Path>) -> Result<TprFile, ParseTprE
     // get force-field parameters
     let ffparams = FFParams::parse(&mut xdrfile, header.precision, header.tpr_version)?;
 
-    let top = TprTopology::parse(
+    let mut top = TprTopology::parse(
         &mut xdrfile,
         header.precision,
         header.tpr_version,
@@ -70,13 +70,12 @@ pub(crate) fn parse_tpr(filename: impl AsRef<Path>) -> Result<TprFile, ParseTprE
     )?;
 
     // get positions, velocities, and forces
-    let coordinates = TprCoordinates::parse(&mut xdrfile, &header)?;
+    top.fill_with_coordinates(Coordinates::parse(&mut xdrfile, &header)?);
 
     Ok(TprFile {
         header,
         system_name,
         simbox,
         topology: top,
-        coordinates,
     })
 }

@@ -203,6 +203,9 @@ impl MoleculeTypeAtom {
             mass: self.mass,
             charge: self.charge,
             element: self.element,
+            position: None,
+            velocity: None,
+            force: None,
         })
     }
 }
