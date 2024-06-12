@@ -3,7 +3,7 @@
 
 //! # minitpr
 //!
-//! `minitpr` is a pure Rust library designed for parsing of Gromacs tpr files, focusing on extracting system topology and structure.
+//! `minitpr` is a pure Rust library designed for parsing Gromacs tpr files, focusing on extracting system topology and structure.
 //!
 //! ## Capabilities and Limitations
 //! - Supports parsing of tpr files from version 103 onwards (Gromacs 5.1 and later).
