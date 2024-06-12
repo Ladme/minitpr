@@ -983,6 +983,10 @@ mod tests {
         let tpr = TprFile::parse("tests/test_files/double_2023.tpr").unwrap();
 
         assert_eq!(tpr.header.n_atoms, 16844);
+        assert_eq!(tpr.header.gromacs_version, String::from("VERSION 2023.2"));
+        assert_eq!(tpr.header.tpr_version, 129);
+        assert_eq!(tpr.header.tpr_generation, 28);
+        assert_eq!(tpr.header.body_size.unwrap(), 848223);
 
         let first_atom = atom!("BB", 1, "GLY", 1, 72.0, 1.0, None);
         let last_atom = atom!("CL", 16844, "ION", 11180, 35.453, -1.0, None);
