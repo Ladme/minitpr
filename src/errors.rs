@@ -49,4 +49,7 @@ pub enum ParseTprError {
     /// Used when an interaction classified as `bond` is involving different number of atoms than 2.
     #[error("{} invalid number of atoms (`{}`) involved in a bond", "error:".red().bold(), .0.to_string().yellow())]
     InvalidNumberOfBondedAtoms(usize),
+    /// Used when the size of intermolecular exclusion group is negative.
+    #[error("{} invalid intermolecular exclusion group size (expected a positive value, got `{}`)", "error:".red().bold(), .0.to_string().yellow())]
+    InvalidIntermolecularExclusionGroupSize(i64),
 }

@@ -10,6 +10,7 @@ use super::{
 use crate::{
     errors::ParseTprError,
     structures::{Precision, TprTopology},
+    NR_GROUP_TYPES,
 };
 
 use super::symtab::SymTable;
@@ -77,6 +78,50 @@ impl TprTopology {
                 expected_n_atoms,
                 topology.atoms.len() as i32,
             ));
+        }
+
+        // skip atom types
+        if tpr_version < 128 {
+            let n_types = xdrfile.read_i32()?;
+            if tpr_version < 113 {
+                xdrfile.skip_multiple_reals(precision, 5 * n_types as i64)?;
+            }
+
+            xdrfile.jump(4 * n_types as i64)?;
+        }
+
+        // skip dihedral correction maps
+        let n_grids = xdrfile.read_i32()?;
+        let grid_spacing = xdrfile.read_i32()?;
+        xdrfile.skip_multiple_reals(
+            precision,
+            (4 * n_grids * grid_spacing * grid_spacing) as i64,
+        )?;
+
+        // skip atom groups
+        for _ in 0..NR_GROUP_TYPES {
+            let group_size = xdrfile.read_i32()?;
+            xdrfile.jump(4 * group_size as i64)?;
+        }
+
+        let n_group_names = xdrfile.read_i32()?;
+        xdrfile.jump(4 * n_group_names as i64)?;
+
+        for _ in 0..NR_GROUP_TYPES {
+            let n_group_numbers = xdrfile.read_i32()?;
+            xdrfile.skip_multiple_uchars_body(tpr_version, n_group_numbers as i64)?;
+        }
+
+        // skip exclusions
+        if tpr_version >= 120 {
+            let intermolecular_exclusion_group_size = xdrfile.read_i64()?;
+            if intermolecular_exclusion_group_size < 0 {
+                return Err(ParseTprError::InvalidIntermolecularExclusionGroupSize(
+                    intermolecular_exclusion_group_size,
+                ));
+            }
+
+            xdrfile.jump(4 * intermolecular_exclusion_group_size)?;
         }
 
         Ok(topology)

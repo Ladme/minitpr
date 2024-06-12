@@ -93,6 +93,8 @@ pub(crate) const DIM: usize = 3;
 pub(crate) const NR_RBDIHS: usize = 6;
 /// Number of fields in the `F_CBTDIHS` function type
 pub(crate) const NR_CBTDIHS: usize = 6;
+/// Number of group types (TemperatureCoupling, EnergyOutput, Acceleration, etc.).
+pub(crate) const NR_GROUP_TYPES: usize = 10;
 
 impl TprFile {
     /// Parse a Gromacs tpr file.
