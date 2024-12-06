@@ -111,8 +111,8 @@ impl TprFile {
     /// ## Notes
     /// - Only tpr files version 103 or higher are supported (Gromacs 5.1 onwards).
     /// - The function only parses the following information: tpr file header,
-    /// name of the system, simulation box, system topology (atoms and bonds),
-    /// positions, velocities, and forces (if present).
+    ///   name of the system, simulation box, system topology (atoms and bonds),
+    ///   positions, velocities, and forces (if present).
     /// - Force-field properties and simulation parameters are NOT parsed.
     /// - If the tpr file does not contain topology information, this function will return an error.
     pub fn parse(filename: impl AsRef<Path>) -> Result<Self, ParseTprError> {

@@ -46,9 +46,12 @@ pub enum ParseTprError {
     /// Used when there is an inconsistency in the number of atoms read from the TPR file.
     #[error("{} inconsistent number of atoms in the tpr file (expected `{}` atoms, got `{}` atoms)", "error:".red().bold(), .0.to_string().yellow(), .1.to_string().yellow())]
     InconsistentNumberOfAtoms(i32, i32),
-    /// Used when an interaction classified as `bond` is involving different number of atoms than 2.
+    /// Used when an interaction classified as `bond` involves different number of atoms than 2.
     #[error("{} invalid number of atoms (`{}`) involved in a bond", "error:".red().bold(), .0.to_string().yellow())]
     InvalidNumberOfBondedAtoms(usize),
+    /// Used when an interaction classified as `settle` involves different number of atoms than 3.
+    #[error("{} invalid number of atoms (`{}`) involved in a settle interaction", "error".red().bold(), .0.to_string().yellow())]
+    InvalidNumberOfSettleAtoms(usize),
     /// Used when the size of intermolecular exclusion group is negative.
     #[error("{} invalid intermolecular exclusion group size (expected a positive value, got `{}`)", "error:".red().bold(), .0.to_string().yellow())]
     InvalidIntermolecularExclusionGroupSize(i64),

@@ -111,6 +111,41 @@ impl Interaction {
         )
     }
 
+    /// Unpack SETTLE interaction into bonds.
+    /// Returns an empty vector, if the interaction is not a settle.
+    /// Returns `ParseTprError` if the bonds could not be constructed due to some inconsistency in the input data.
+    pub(super) fn settle2bonds(&self, atoms: &[Atom]) -> Result<Vec<Bond>, ParseTprError> {
+        if !matches!(self.interaction_type, InteractionType::F_SETTLE) {
+            return Ok(vec![]);
+        }
+
+        // three atoms must be involved
+        if self.interacting_atom_indices.len() != 3 {
+            return Err(ParseTprError::InvalidNumberOfSettleAtoms(
+                self.interacting_atom_indices.len(),
+            ));
+        }
+
+        // get global atom indices
+        let get_atom_index = |index: usize| -> Result<usize, ParseTprError> {
+            atoms
+                .get(self.interacting_atom_indices[index] as usize)
+                .map(|x| (x.atom_number - 1) as usize)
+                .ok_or(ParseTprError::CouldNotConstructTopology)
+        };
+
+        Ok(vec![
+            Bond {
+                atom1: get_atom_index(0)?,
+                atom2: get_atom_index(1)?,
+            },
+            Bond {
+                atom1: get_atom_index(0)?,
+                atom2: get_atom_index(2)?,
+            },
+        ])
+    }
+
     /// Unpack `Interaction` into an Bond between specific atoms.
     /// Returns `None`, if the interaction is not a bond.
     /// Returns `ParseTprError` if the Bond could not be constructed due to some inconsistency in the input data.

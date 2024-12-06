@@ -127,7 +127,10 @@ impl MoleculeType {
         for interaction in self.interactions.iter() {
             match interaction.unpack2bond(&atoms) {
                 Ok(Some(x)) => bonds.push(x),
-                Ok(None) => (),
+                Ok(None) => match interaction.settle2bonds(&atoms) {
+                    Ok(x) => bonds.extend(x.into_iter()),
+                    Err(e) => return Err(e),
+                },
                 Err(e) => return Err(e),
             }
         }

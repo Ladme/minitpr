@@ -2851,6 +2851,8 @@ mod tests {
             bond!(174, 175),
             bond!(174, 176),
             bond!(174, 177),
+            bond!(178, 179),
+            bond!(178, 180),
         ];
 
         if intermolecular {
@@ -3121,7 +3123,7 @@ mod tests {
         );
 
         let first_bond = bond!(0, 1);
-        let last_bond = bond!(17511, 17514);
+        let last_bond = bond!(32785, 32787);
 
         test_eq_atom(&tpr.topology.atoms[0], &first_atom);
         test_eq_atom(&tpr.topology.atoms[32816], &last_atom);
@@ -3166,7 +3168,7 @@ mod tests {
         );
 
         let first_bond = bond!(0, 1);
-        let last_bond = bond!(17148, 17151);
+        let last_bond = bond!(34463, 34465);
 
         test_eq_atom(&tpr.topology.atoms[0], &first_atom);
         test_eq_atom(&tpr.topology.atoms[34465], &last_atom);
@@ -3314,6 +3316,31 @@ mod tests {
     fn triclinic_5() {
         let tpr = TprFile::parse("tests/test_files/triclinic_5.tpr").unwrap();
         test_eq_triclinic(&tpr);
+    }
+
+    #[test]
+    fn water_2021() {
+        let tpr = TprFile::parse("tests/test_files/water_2021.tpr").unwrap();
+
+        assert_eq!(tpr.topology.atoms.len(), 9);
+        assert_eq!(tpr.topology.bonds.len(), 6);
+
+        let expected_atom_names = ["OH2", "H1", "H2", "OH2", "H1", "H2", "OH2", "H1", "H2"];
+        let expected_bonds = [(0, 1), (0, 2), (3, 4), (3, 5), (6, 7), (6, 8)];
+
+        for (atom, expected) in tpr
+            .topology
+            .atoms
+            .iter()
+            .zip(expected_atom_names.into_iter())
+        {
+            assert_eq!(atom.atom_name, expected);
+        }
+
+        for (bond, expected) in tpr.topology.bonds.iter().zip(expected_bonds.into_iter()) {
+            assert_eq!(bond.atom1, expected.0);
+            assert_eq!(bond.atom2, expected.1);
+        }
     }
 }
 
