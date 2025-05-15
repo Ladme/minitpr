@@ -1,5 +1,5 @@
 // Released under Apache License 2.0 / MIT License.
-// Copyright (c) 2024 Ladislav Bartos
+// Copyright (c) 2024-2025 Ladislav Bartos
 
 //! This file contains functions for working with Symbol Table.
 
