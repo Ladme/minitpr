@@ -93,6 +93,9 @@ impl FFParams {
             }
             InteractionType::F_RESTRANGLES => {
                 xdrfile.skip_multiple_reals(precision, 2)?;
+                if tpr_version >= 134 {
+                    xdrfile.skip_multiple_reals(precision, 2)?;
+                }
             }
             InteractionType::F_LINEAR_ANGLES => {
                 xdrfile.skip_multiple_reals(precision, 4)?;
@@ -168,6 +171,9 @@ impl FFParams {
             }
             InteractionType::F_RESTRDIHS => {
                 xdrfile.skip_multiple_reals(precision, 2)?;
+                if tpr_version >= 134 {
+                    xdrfile.skip_multiple_reals(precision, 2)?;
+                }
             }
             InteractionType::F_DISRES => {
                 xdrfile.jump(8)?;
@@ -189,6 +195,9 @@ impl FFParams {
             }
             InteractionType::F_CBTDIHS => {
                 xdrfile.skip_multiple_reals(precision, crate::NR_CBTDIHS as i64)?;
+                if tpr_version >= 134 {
+                    xdrfile.skip_multiple_reals(precision, crate::NR_CBTDIHS as i64)?;
+                }
             }
             InteractionType::F_RBDIHS | InteractionType::F_FOURDIHS => {
                 xdrfile.skip_multiple_reals(precision, 2 * crate::NR_RBDIHS as i64)?;
