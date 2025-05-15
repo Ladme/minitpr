@@ -3342,6 +3342,28 @@ mod tests {
             assert_eq!(bond.atom2, expected.1);
         }
     }
+
+    #[test]
+    fn restrangles_2025() {
+        let tpr = TprFile::parse("tests/test_files/restrangles_2025.tpr").unwrap();
+
+        assert_eq!(tpr.topology.atoms.len(), 24404);
+        assert_eq!(tpr.topology.bonds.len(), 9184);
+
+        assert_eq!(
+            tpr.topology.atoms.first().unwrap().atom_name,
+            String::from("BB")
+        );
+        assert_eq!(
+            tpr.topology.atoms.last().unwrap().atom_name,
+            String::from("CL")
+        );
+
+        assert_eq!(tpr.topology.bonds.first().unwrap().atom1, 0);
+        assert_eq!(tpr.topology.bonds.first().unwrap().atom2, 2);
+        assert_eq!(tpr.topology.bonds.last().unwrap().atom1, 8495);
+        assert_eq!(tpr.topology.bonds.last().unwrap().atom2, 8496);
+    }
 }
 
 #[cfg(test)]
