@@ -245,7 +245,7 @@ impl FTUpdater {
     /// Create a `TprFTUpdater` structure.
     pub(super) fn default() -> Self {
         FTUpdater {
-            update: HashMap::from([(121, 65), (118, 67), (117, 76)]),
+            update: HashMap::from([(121, 65), (118, 67), (117, 76), (137, 78)]),
         }
     }
 }
@@ -332,6 +332,7 @@ pub(crate) enum InteractionType {
     F_COM_PULL,
     F_DENSITYFITTING,
     F_EQM,
+    F_ENNPOT,
     F_EPOT,
     F_EKIN,
     F_ETOT,
