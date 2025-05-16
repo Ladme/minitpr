@@ -1,5 +1,8 @@
 # Changelog for the `minitpr` crate
 
+## Version 0.2.3
+- **BUG FIX**: Fixed reading of tpr files version 134 and newer.
+
 ## Version 0.2.2
 - **BUG FIX**: Fixed bug where bonds were not loaded for some water models (TIP3P and similar). The SETTLE interaction is now properly translated into bonds.
 
